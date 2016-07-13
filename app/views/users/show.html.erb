@@ -1,0 +1,11 @@
+<h1><%= @user.name %></h1>
+<% if @user.is_lender %>
+  <div>Lender</div>
+<% else %>
+  <div>Borrower</div>
+<% end %>
+
+<div>Rating: <%= @user.rating %></div>
+
+<div><%= @user.location %></div>
+<div><a href="#"><%= @user.payment_url %></a></div>

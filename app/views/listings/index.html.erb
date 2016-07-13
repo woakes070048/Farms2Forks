@@ -1,0 +1,14 @@
+<div class="container">
+<% @tools.each do |listing| %>
+  <div class="collection-item avatar">
+  <b><%= link_to listing.tool, listing %></b>
+  <div><%= image_tag listing.image.url(:thumb) %></div>
+  <div><%= listing.price %></div>
+  <!--<div><%= listing.user.name if listing.user %></div> -->
+  <div><%= link_to listing.user.name, listing.user %></div>
+  <div><%= listing.user.location %></div>
+  <div>Posted <%= time_ago_in_words(listing.created_at) %> ago</div>
+  <br>
+  </div>
+<% end %>
+</div>
