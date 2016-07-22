@@ -2,8 +2,7 @@ class ListingsController < ApplicationController
   before_action :must_be_lender, only: [:new, :create, :update, :destroy]
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  # before_action :authorized_user, only: [:edit, :update, :destroy]
-
+  # before_action :authorized_user, only: [:edit, :update, :destroy]s
 
   def index
     @tools = Listing.all.order('created_at DESC')
