@@ -18,7 +18,7 @@ The project uses several different technologies and gems. Below is a list outlin
 * [PostgreSQL](https://www.postgresql.org/) - The choice of database
 * [Devise](https://rubygems.org/gems/devise/versions/3.5.6) - Allow for user auth. and user registers
 * [Paperclip](https://rubygems.org/gems/paperclip) - Make uploading images (`.png`, .`jpeg`, `.gif`) easier to implement
-* [Strip Connect](https://rubygems.org/gems/omniauth-stripe-connect/versions/2.7.0) - Used to write the payment system
+* [Stripe Connect](https://rubygems.org/gems/omniauth-stripe-connect/versions/2.7.0) - Used to write the payment system
 
 For a full list of Gems used, view the `gemfile` in the root directory.
 
