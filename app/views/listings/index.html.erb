@@ -1,25 +1,30 @@
 <br>
-<h2 class="center brown-text">Food</h2>
+<h2 class="center" style="color: #7e57c2;">Food</h2>
 <br>
-<ul class="collection" style="width: 75%; display:table; margin: 0 auto;">
+
+<div class="card-panel" style="width: 60%; display:table; margin: 0 auto;">
+<div>
 <% @tools.each do |listing| %>
-  <li class="collection-item avatar">
+
     <div class="row">
-      <div class="col s3">
-        <img src="<%= listing.image.url %>" class="circle"></img>
+      <div class="col s2">
+        <img class="circle"><%= image_tag listing.image.url(:thumb), :class => 'show_img' %></img>
       </div>
 
       <div class="col s9">
         <span class="title"><%= link_to listing.tool, listing %></span>
-        <div><%= listing.price %></div>
+        <div> $<%= listing.price %></div>
   <!--<div><%= listing.user.name if listing.user %></div> -->
         <div><%= listing.user.location %></div>
         <div>Posted <%= time_ago_in_words(listing.created_at) %> ago by <%= link_to listing.user.name, listing.user %></div>
       </div>
-    </div>
-  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-</li>
-<% end %>
-</ul>
 
+  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+
+</div>
+<div class="divider"></div>
+<br>
+<% end %>
+</div>
+</div>
 <br>

@@ -1,3 +1,5 @@
+<div class="container">
+
 <%= form_for @tool, html: { multipart: true } do |i| %>
   <%= i.label "Food name" %> <br>
   <%= i.text_field :tool %> <br>
@@ -8,5 +10,9 @@
   <%= i.label :image %> <br>
   <%= i.file_field :image %><br>
   <br>
-  <%= i.submit %>
+  <div class='btn waves-effect waves-light green darken-1'>
+    <%= i.submit %>
+  </div>
 <% end %>
+
+</div>

@@ -1,13 +1,60 @@
-<h2><%= @tool.tool %></h2>
-<div><%= image_tag @tool.image.url(:medium) %></div>
-<div><b>Rental Price:</b> <%= @tool.price %></div>
-<div><b>Lender location:</b> <%= @tool.user.location %></div>
-<div><b>Payment link:</b> <%= @tool.user.payment_url %> </div>
+<h2 class="center" style="color: #7e57c2"><%= @tool.tool %></h2>
+<div class="container">
 
-<a class="waves-effect waves-light btn"><i class="material-icons right">swap_horiz</i>Bite This!</a>
-<br>
+<div class="card-panel">
 
-<% if @tool.user == current_user %>
-  <%= link_to 'Edit', edit_listing_path(@tool) %>
-  <%= link_to 'Delete', listing_path(@tool), method: :delete, data: { confirm: "You are about to delete this listing" } %>
-<% end %>
+<div class="row">
+
+  <div class="col s5"><%= image_tag @tool.image.url(:medium), :class => 'show_img' %></div>
+
+  <div class="col s7">
+  <div><b>Price: </b> $<%= @tool.price %></div>
+
+  <div><b>Farm location:</b> <%= @tool.user.location %></div>
+  <div>Posted by <%= link_to @tool.user.name, @tool.user %></div>
+  <i class='material-icons'>star</i><i class='material-icons'>star</i><i class='material-icons'>star</i><i class='material-icons'>star</i>
+  <br>
+  <br>
+  <a id="bite" class="waves-effect waves-light btn-large light-green darken-1 modal-trigger" href="#modal1"><i class="material-icons right">swap_horiz</i>Bite This!</a>
+
+  <br>
+
+  <% if @tool.user == current_user %>
+    <%= link_to 'Edit', edit_listing_path(@tool) %>
+    <%= link_to 'Delete', listing_path(@tool), method: :delete, data: { confirm: "You are about to delete this listing" } %>
+  <% end %>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Bite This?</h4>
+      <p><b>Payment link:</b> <a><%= @tool.user.payment_url %></a></p>
+      <p>A confirmation of the transaction has been sent to your email.</p>
+      <p>The food will be dilivered to your door on <b>24/07/2016</b> at approximatley <b>4:00pm</b>.</p>
+      <p>Enjoy the food!</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
+
+
+
+<br><br><br><br><br><br>
+
+<script type="text/javascript">
+  var biteMe = document.getElementById('bite');
+
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+
+</script>
