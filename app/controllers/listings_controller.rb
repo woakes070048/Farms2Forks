@@ -4,15 +4,16 @@ class ListingsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   # before_action :authorized_user, only: [:edit, :update, :destroy]s
 
+  # Default page that displays the food listings in order of creation
   def index
     @tools = Listing.all.order('created_at DESC')
   end
 
   def new
-    # @tool = Listing.new
     @tool = current_user.listings.build
   end
 
+  # When user wants to create a new food listing
   def create
     @tool = current_user.listings.build(query_p)
     if @tool.save
@@ -21,7 +22,7 @@ class ListingsController < ApplicationController
       render 'new'
     end
   end
-   
+
   def show
     @tool = Listing.find(params[:id])
   end
