@@ -1,4 +1,4 @@
-# Farms2Forks
+![Farms2Forks](http://imgur.com/oP1pDee)
 
 ## About
 Welcome to the Farms2Forks Github page! Farms2Forks is an online platform that enables consumers to gain access to fresh, local, and quality food without having to go through the hassle of travelling to farms. The platfrom also allows people to support local small-scale farms, while giving farmers larger group of people to connect with and give food to.
