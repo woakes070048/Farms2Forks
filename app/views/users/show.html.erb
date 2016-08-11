@@ -22,9 +22,7 @@
     <div class="row">
       <div class="col s8">
       <h5><b>Bio</b></h5>
-      <p>
-        Hello, I am the owner of a small group of farms located in the North York region. Our farms specialize in growing the best and tastiest corn, wheat, fruits, and livestock. Feel free to visit the farms at any time for an unforgtable experiance.
-      </p>
+      <p><%= @user.description %></p>
       </div>
       <div class="col s4">
       <% if @user.is_lender %>

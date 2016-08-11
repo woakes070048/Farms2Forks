@@ -56036,3 +56036,1135 @@ Started GET "/assets/materialize/extras/nouislider.self-18d2d5ad521555c564cc69b1
 
 
 Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2016-08-10 23:40:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddBiosToUsers (20160811071902)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "bio_file_name" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "bio_content_type" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "bio_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "bio_updated_at" datetime
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160811071902"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/users/10" for 127.0.0.1 at 2016-08-11 00:20:49 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 426ms (Views: 388.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-5e4b2b57890e291613093002a811a2771f15e499e71a74caa7949f33cbc526ee.css?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/listings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/init.self-13192c9d13ecca35bd2c0b77d1b392be29a7ff05e660fc46d1499159f3a80d11.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/initial.self-79f269ead2aeaa809299033919f9128fa0d9700d0248cad0dcd6442ce43dc389.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/jquery.easing.1.3.self-0170bc905fbddc075a56bdccce1be6a58f3713a14137b607ba9bd9f96fd7835f.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/animation.self-a1028b0bcf2e26331bedf7b90e81103f0707e69fdec488aa951de94b51987767.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/velocity.min.self-5adbb81af5c205a959e06198156b4b31fcd57f02c592e3fb096d7b74e8f401a6.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/hammer.min.self-bf8bdb0953b1a135f96716e362e1f7a8e64168c914fa77ca31973bb70e57a731.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/jquery.hammer.self-73fd69102f356b9abfc9ee242b19895f62454f42cfcfa1f066be71d2c8f41c7a.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/global.self-90649deff3358499c5859330da1363eea3e2bef75c80df5940f3894778f95027.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/collapsible.self-4c13fea644257c8f9384721f7d3bc27bced51754ddf3602b56093e2450a5d9c2.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/dropdown.self-846e8151c8bb8f7e39464f96bd95d48a37ff9831d8f478b6bdcbd563dd2534f0.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/leanModal.self-127e920c37478ac94207994c34d28e40b2d44817a0d93176ed325bdbee80863e.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/materialbox.self-8572736f9d17261189da8a9fc91555d63b29498f4f8665328e28261c7c4cdb68.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/parallax.self-7ac34f0f3dcef83deee116ea473a2770cec13e07c8e0dcce08cc2372bbe295d3.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/tabs.self-0eee47c7ae3f1cfcf49b9619bb067eaf4fa75379be3b78469a0120a8bf972bd3.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/tooltip.self-df3538fd067523c8b7f4d50e060340ec0b551ebaba9733e157c404df9a96a185.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/waves.self-26e9b9cfaa9ccbc292ed510f654bd279d69695f5337a14c9800b36e92f96735b.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/toasts.self-1eaa9f33c4c3b83f381997876ba6ac53899a5ca72a6b401708c32625fc553adc.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/sideNav.self-196d1801e7592bfd857227ce793d1de69b06fb6ca9d908f44f5618c8564a12d0.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/scrollspy.self-2d0375d44b1d864ecb8e31c25a22c4f3be766284788b0c494ec51df71e2b0e09.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/forms.self-e70e77c2b9157926587d6cfd009e8e0eedbaf059bdaa9e1bfe27b186b345598b.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/slider.self-219e35a6b0ade584e951aa0f39fe9856b3ef0e6bb33af123dd4b8ce6757b03cb.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/cards.self-b1de04b6f5f525d63199f556bb55d5b8bdae7170b91bfcb503958bc8ed10945b.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/chips.self-9b19ca899ba360746581059852bf2a40b3338402eef9df9a7806efd8578056dd.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/pushpin.self-101d3fec3225f47ac0da9bd501200d30f92f97f70fb15500c835cb850c962816.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/buttons.self-fc0951c300b1984a00694eabc8c451531be448d646ac073b05e4d2fbf7209302.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/transitions.self-c527b205edfdd1f961487c4c7beaf83c335262accb4dff964341a86eb60fd2f2.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/scrollFire.self-9fb128253d776689dfe2091470e36d2e94c13c6340700135ee679aa20148dffd.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.self-7a9d1216fe1172f8e8fd78fb86cfd4da25c909ebd6983cba5da20817d437d92b.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.date.self-5924b278beda2df8570f137f72b37e2d0f516acbc11a0994d1abb74380f078ef.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/character_counter.self-8bb854e15067a96db5bff6896d1d9435e4df83cf5bf6877a1d606940661d2588.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/carousel.self-6f3b9002af3ab4d871a03a44d2e174370720ab31f19a4ee543c1904c32e2befa.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize-sprockets.self-4691589913babdfbd3fb736895105a8e826d4abde842e6d1e8dd2d188e255bc7.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/materialize/extras/nouislider.self-18d2d5ad521555c564cc69b1c153247aedf8c99609e154dc0bf963a5b3d7ede1.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2016-08-11 00:20:50 -0700
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2016-08-11 00:20:54 -0700
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (28.0ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `bio' for #<User:0x007f1920095070>):
+     7: 
+     8:   <div class="field">
+     9:     <%= f.label "Farm Description" %><br />
+    10:     <%= f.text_field :bio %>
+    11:   </div>
+    12: 
+    13:   <div class="field">
+  app/views/devise/registrations/edit.html.erb:10:in `block in _app_views_devise_registrations_edit_html_erb__434755554346435075_69872944170540'
+  app/views/devise/registrations/edit.html.erb:5:in `_app_views_devise_registrations_edit_html_erb__434755554346435075_69872944170540'
+
+
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.0ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.1ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2016-08-11 00:20:54 -0700
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `bio' for #<User:0x007f191c07a508>):
+     7: 
+     8:   <div class="field">
+     9:     <%= f.label "Farm Description" %><br />
+    10:     <%= f.text_field :bio %>
+    11:   </div>
+    12: 
+    13:   <div class="field">
+  app/views/devise/registrations/edit.html.erb:10:in `block in _app_views_devise_registrations_edit_html_erb__434755554346435075_69872910572960'
+  app/views/devise/registrations/edit.html.erb:5:in `_app_views_devise_registrations_edit_html_erb__434755554346435075_69872910572960'
+
+
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.4ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.4ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mattias/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDescriptionsToUsers (20160811072247)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "description" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160811072247"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2016-08-11 00:23:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 436ms (Views: 402.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-5e4b2b57890e291613093002a811a2771f15e499e71a74caa7949f33cbc526ee.css?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/init.self-13192c9d13ecca35bd2c0b77d1b392be29a7ff05e660fc46d1499159f3a80d11.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/listings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/initial.self-79f269ead2aeaa809299033919f9128fa0d9700d0248cad0dcd6442ce43dc389.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/jquery.easing.1.3.self-0170bc905fbddc075a56bdccce1be6a58f3713a14137b607ba9bd9f96fd7835f.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/animation.self-a1028b0bcf2e26331bedf7b90e81103f0707e69fdec488aa951de94b51987767.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/velocity.min.self-5adbb81af5c205a959e06198156b4b31fcd57f02c592e3fb096d7b74e8f401a6.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/hammer.min.self-bf8bdb0953b1a135f96716e362e1f7a8e64168c914fa77ca31973bb70e57a731.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/global.self-90649deff3358499c5859330da1363eea3e2bef75c80df5940f3894778f95027.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/jquery.hammer.self-73fd69102f356b9abfc9ee242b19895f62454f42cfcfa1f066be71d2c8f41c7a.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/collapsible.self-4c13fea644257c8f9384721f7d3bc27bced51754ddf3602b56093e2450a5d9c2.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/dropdown.self-846e8151c8bb8f7e39464f96bd95d48a37ff9831d8f478b6bdcbd563dd2534f0.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/leanModal.self-127e920c37478ac94207994c34d28e40b2d44817a0d93176ed325bdbee80863e.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/materialbox.self-8572736f9d17261189da8a9fc91555d63b29498f4f8665328e28261c7c4cdb68.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/parallax.self-7ac34f0f3dcef83deee116ea473a2770cec13e07c8e0dcce08cc2372bbe295d3.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/tabs.self-0eee47c7ae3f1cfcf49b9619bb067eaf4fa75379be3b78469a0120a8bf972bd3.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/tooltip.self-df3538fd067523c8b7f4d50e060340ec0b551ebaba9733e157c404df9a96a185.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/waves.self-26e9b9cfaa9ccbc292ed510f654bd279d69695f5337a14c9800b36e92f96735b.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/toasts.self-1eaa9f33c4c3b83f381997876ba6ac53899a5ca72a6b401708c32625fc553adc.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/sideNav.self-196d1801e7592bfd857227ce793d1de69b06fb6ca9d908f44f5618c8564a12d0.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/scrollspy.self-2d0375d44b1d864ecb8e31c25a22c4f3be766284788b0c494ec51df71e2b0e09.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/forms.self-e70e77c2b9157926587d6cfd009e8e0eedbaf059bdaa9e1bfe27b186b345598b.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/slider.self-219e35a6b0ade584e951aa0f39fe9856b3ef0e6bb33af123dd4b8ce6757b03cb.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/cards.self-b1de04b6f5f525d63199f556bb55d5b8bdae7170b91bfcb503958bc8ed10945b.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/chips.self-9b19ca899ba360746581059852bf2a40b3338402eef9df9a7806efd8578056dd.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/pushpin.self-101d3fec3225f47ac0da9bd501200d30f92f97f70fb15500c835cb850c962816.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/buttons.self-fc0951c300b1984a00694eabc8c451531be448d646ac073b05e4d2fbf7209302.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/transitions.self-c527b205edfdd1f961487c4c7beaf83c335262accb4dff964341a86eb60fd2f2.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/scrollFire.self-9fb128253d776689dfe2091470e36d2e94c13c6340700135ee679aa20148dffd.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.self-7a9d1216fe1172f8e8fd78fb86cfd4da25c909ebd6983cba5da20817d437d92b.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.date.self-5924b278beda2df8570f137f72b37e2d0f516acbc11a0994d1abb74380f078ef.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/character_counter.self-8bb854e15067a96db5bff6896d1d9435e4df83cf5bf6877a1d606940661d2588.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/carousel.self-6f3b9002af3ab4d871a03a44d2e174370720ab31f19a4ee543c1904c32e2befa.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize-sprockets.self-4691589913babdfbd3fb736895105a8e826d4abde842e6d1e8dd2d188e255bc7.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/materialize/extras/nouislider.self-18d2d5ad521555c564cc69b1c153247aedf8c99609e154dc0bf963a5b3d7ede1.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2016-08-11 00:23:49 -0700
+
+
+Started PUT "/users" for 127.0.0.1 at 2016-08-11 00:24:07 -0700
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8XnFpg+X4fcJ263uJmsktRE9KGDQQC9F4peH4ypgkb8epAkOXejjUVK8/SErynM97JbPhP0Ns9OxiTccUcnKiA==", "user"=>{"description"=>"The best god damn farm NA!", "name"=>"Bill Gates", "email"=>"billgates@microsoft.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "location"=>"Seatlle", "is_lender"=>"true", "payment_url"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-11 00:24:07 -0700
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered listings/index.html.erb within layouts/application (18.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+Completed 200 OK in 97ms (Views: 91.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2016-08-11 00:24:12 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-5e4b2b57890e291613093002a811a2771f15e499e71a74caa7949f33cbc526ee.css?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/listings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/init.self-13192c9d13ecca35bd2c0b77d1b392be29a7ff05e660fc46d1499159f3a80d11.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/initial.self-79f269ead2aeaa809299033919f9128fa0d9700d0248cad0dcd6442ce43dc389.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/jquery.easing.1.3.self-0170bc905fbddc075a56bdccce1be6a58f3713a14137b607ba9bd9f96fd7835f.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/animation.self-a1028b0bcf2e26331bedf7b90e81103f0707e69fdec488aa951de94b51987767.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/velocity.min.self-5adbb81af5c205a959e06198156b4b31fcd57f02c592e3fb096d7b74e8f401a6.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/hammer.min.self-bf8bdb0953b1a135f96716e362e1f7a8e64168c914fa77ca31973bb70e57a731.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/jquery.hammer.self-73fd69102f356b9abfc9ee242b19895f62454f42cfcfa1f066be71d2c8f41c7a.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/global.self-90649deff3358499c5859330da1363eea3e2bef75c80df5940f3894778f95027.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/collapsible.self-4c13fea644257c8f9384721f7d3bc27bced51754ddf3602b56093e2450a5d9c2.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/dropdown.self-846e8151c8bb8f7e39464f96bd95d48a37ff9831d8f478b6bdcbd563dd2534f0.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/leanModal.self-127e920c37478ac94207994c34d28e40b2d44817a0d93176ed325bdbee80863e.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/materialbox.self-8572736f9d17261189da8a9fc91555d63b29498f4f8665328e28261c7c4cdb68.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/parallax.self-7ac34f0f3dcef83deee116ea473a2770cec13e07c8e0dcce08cc2372bbe295d3.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/tabs.self-0eee47c7ae3f1cfcf49b9619bb067eaf4fa75379be3b78469a0120a8bf972bd3.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/tooltip.self-df3538fd067523c8b7f4d50e060340ec0b551ebaba9733e157c404df9a96a185.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/waves.self-26e9b9cfaa9ccbc292ed510f654bd279d69695f5337a14c9800b36e92f96735b.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/toasts.self-1eaa9f33c4c3b83f381997876ba6ac53899a5ca72a6b401708c32625fc553adc.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/sideNav.self-196d1801e7592bfd857227ce793d1de69b06fb6ca9d908f44f5618c8564a12d0.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/forms.self-e70e77c2b9157926587d6cfd009e8e0eedbaf059bdaa9e1bfe27b186b345598b.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/scrollspy.self-2d0375d44b1d864ecb8e31c25a22c4f3be766284788b0c494ec51df71e2b0e09.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/slider.self-219e35a6b0ade584e951aa0f39fe9856b3ef0e6bb33af123dd4b8ce6757b03cb.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/cards.self-b1de04b6f5f525d63199f556bb55d5b8bdae7170b91bfcb503958bc8ed10945b.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/pushpin.self-101d3fec3225f47ac0da9bd501200d30f92f97f70fb15500c835cb850c962816.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/chips.self-9b19ca899ba360746581059852bf2a40b3338402eef9df9a7806efd8578056dd.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/buttons.self-fc0951c300b1984a00694eabc8c451531be448d646ac073b05e4d2fbf7209302.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/transitions.self-c527b205edfdd1f961487c4c7beaf83c335262accb4dff964341a86eb60fd2f2.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/scrollFire.self-9fb128253d776689dfe2091470e36d2e94c13c6340700135ee679aa20148dffd.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.self-7a9d1216fe1172f8e8fd78fb86cfd4da25c909ebd6983cba5da20817d437d92b.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.date.self-5924b278beda2df8570f137f72b37e2d0f516acbc11a0994d1abb74380f078ef.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/character_counter.self-8bb854e15067a96db5bff6896d1d9435e4df83cf5bf6877a1d606940661d2588.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/carousel.self-6f3b9002af3ab4d871a03a44d2e174370720ab31f19a4ee543c1904c32e2befa.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize-sprockets.self-4691589913babdfbd3fb736895105a8e826d4abde842e6d1e8dd2d188e255bc7.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/materialize/extras/nouislider.self-18d2d5ad521555c564cc69b1c153247aedf8c99609e154dc0bf963a5b3d7ede1.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2016-08-11 00:24:39 -0700
+
+
+Started GET "/users/10" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-5e4b2b57890e291613093002a811a2771f15e499e71a74caa7949f33cbc526ee.css?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/init.self-13192c9d13ecca35bd2c0b77d1b392be29a7ff05e660fc46d1499159f3a80d11.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/listings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/initial.self-79f269ead2aeaa809299033919f9128fa0d9700d0248cad0dcd6442ce43dc389.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/jquery.easing.1.3.self-0170bc905fbddc075a56bdccce1be6a58f3713a14137b607ba9bd9f96fd7835f.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/animation.self-a1028b0bcf2e26331bedf7b90e81103f0707e69fdec488aa951de94b51987767.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/velocity.min.self-5adbb81af5c205a959e06198156b4b31fcd57f02c592e3fb096d7b74e8f401a6.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/hammer.min.self-bf8bdb0953b1a135f96716e362e1f7a8e64168c914fa77ca31973bb70e57a731.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/jquery.hammer.self-73fd69102f356b9abfc9ee242b19895f62454f42cfcfa1f066be71d2c8f41c7a.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/global.self-90649deff3358499c5859330da1363eea3e2bef75c80df5940f3894778f95027.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/collapsible.self-4c13fea644257c8f9384721f7d3bc27bced51754ddf3602b56093e2450a5d9c2.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/dropdown.self-846e8151c8bb8f7e39464f96bd95d48a37ff9831d8f478b6bdcbd563dd2534f0.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/leanModal.self-127e920c37478ac94207994c34d28e40b2d44817a0d93176ed325bdbee80863e.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/materialbox.self-8572736f9d17261189da8a9fc91555d63b29498f4f8665328e28261c7c4cdb68.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/parallax.self-7ac34f0f3dcef83deee116ea473a2770cec13e07c8e0dcce08cc2372bbe295d3.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/tabs.self-0eee47c7ae3f1cfcf49b9619bb067eaf4fa75379be3b78469a0120a8bf972bd3.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/tooltip.self-df3538fd067523c8b7f4d50e060340ec0b551ebaba9733e157c404df9a96a185.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/waves.self-26e9b9cfaa9ccbc292ed510f654bd279d69695f5337a14c9800b36e92f96735b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/toasts.self-1eaa9f33c4c3b83f381997876ba6ac53899a5ca72a6b401708c32625fc553adc.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/sideNav.self-196d1801e7592bfd857227ce793d1de69b06fb6ca9d908f44f5618c8564a12d0.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/scrollspy.self-2d0375d44b1d864ecb8e31c25a22c4f3be766284788b0c494ec51df71e2b0e09.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/forms.self-e70e77c2b9157926587d6cfd009e8e0eedbaf059bdaa9e1bfe27b186b345598b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/slider.self-219e35a6b0ade584e951aa0f39fe9856b3ef0e6bb33af123dd4b8ce6757b03cb.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/chips.self-9b19ca899ba360746581059852bf2a40b3338402eef9df9a7806efd8578056dd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/cards.self-b1de04b6f5f525d63199f556bb55d5b8bdae7170b91bfcb503958bc8ed10945b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/pushpin.self-101d3fec3225f47ac0da9bd501200d30f92f97f70fb15500c835cb850c962816.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/buttons.self-fc0951c300b1984a00694eabc8c451531be448d646ac073b05e4d2fbf7209302.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/transitions.self-c527b205edfdd1f961487c4c7beaf83c335262accb4dff964341a86eb60fd2f2.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/scrollFire.self-9fb128253d776689dfe2091470e36d2e94c13c6340700135ee679aa20148dffd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:00 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.self-7a9d1216fe1172f8e8fd78fb86cfd4da25c909ebd6983cba5da20817d437d92b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:01 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.date.self-5924b278beda2df8570f137f72b37e2d0f516acbc11a0994d1abb74380f078ef.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:01 -0700
+
+
+Started GET "/assets/materialize/character_counter.self-8bb854e15067a96db5bff6896d1d9435e4df83cf5bf6877a1d606940661d2588.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:01 -0700
+
+
+Started GET "/assets/materialize/carousel.self-6f3b9002af3ab4d871a03a44d2e174370720ab31f19a4ee543c1904c32e2befa.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:01 -0700
+
+
+Started GET "/assets/materialize-sprockets.self-4691589913babdfbd3fb736895105a8e826d4abde842e6d1e8dd2d188e255bc7.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:01 -0700
+
+
+Started GET "/assets/materialize/extras/nouislider.self-18d2d5ad521555c564cc69b1c153247aedf8c99609e154dc0bf963a5b3d7ede1.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:01 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:01 -0700
+
+
+Started GET "/users/10" for 127.0.0.1 at 2016-08-11 00:25:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 81ms (Views: 63.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-5e4b2b57890e291613093002a811a2771f15e499e71a74caa7949f33cbc526ee.css?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/listings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/init.self-13192c9d13ecca35bd2c0b77d1b392be29a7ff05e660fc46d1499159f3a80d11.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/initial.self-79f269ead2aeaa809299033919f9128fa0d9700d0248cad0dcd6442ce43dc389.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/jquery.easing.1.3.self-0170bc905fbddc075a56bdccce1be6a58f3713a14137b607ba9bd9f96fd7835f.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/animation.self-a1028b0bcf2e26331bedf7b90e81103f0707e69fdec488aa951de94b51987767.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/velocity.min.self-5adbb81af5c205a959e06198156b4b31fcd57f02c592e3fb096d7b74e8f401a6.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/hammer.min.self-bf8bdb0953b1a135f96716e362e1f7a8e64168c914fa77ca31973bb70e57a731.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/jquery.hammer.self-73fd69102f356b9abfc9ee242b19895f62454f42cfcfa1f066be71d2c8f41c7a.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/global.self-90649deff3358499c5859330da1363eea3e2bef75c80df5940f3894778f95027.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/collapsible.self-4c13fea644257c8f9384721f7d3bc27bced51754ddf3602b56093e2450a5d9c2.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/dropdown.self-846e8151c8bb8f7e39464f96bd95d48a37ff9831d8f478b6bdcbd563dd2534f0.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/leanModal.self-127e920c37478ac94207994c34d28e40b2d44817a0d93176ed325bdbee80863e.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/materialbox.self-8572736f9d17261189da8a9fc91555d63b29498f4f8665328e28261c7c4cdb68.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/parallax.self-7ac34f0f3dcef83deee116ea473a2770cec13e07c8e0dcce08cc2372bbe295d3.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/tabs.self-0eee47c7ae3f1cfcf49b9619bb067eaf4fa75379be3b78469a0120a8bf972bd3.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/tooltip.self-df3538fd067523c8b7f4d50e060340ec0b551ebaba9733e157c404df9a96a185.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/waves.self-26e9b9cfaa9ccbc292ed510f654bd279d69695f5337a14c9800b36e92f96735b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/toasts.self-1eaa9f33c4c3b83f381997876ba6ac53899a5ca72a6b401708c32625fc553adc.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/sideNav.self-196d1801e7592bfd857227ce793d1de69b06fb6ca9d908f44f5618c8564a12d0.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/scrollspy.self-2d0375d44b1d864ecb8e31c25a22c4f3be766284788b0c494ec51df71e2b0e09.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/forms.self-e70e77c2b9157926587d6cfd009e8e0eedbaf059bdaa9e1bfe27b186b345598b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/slider.self-219e35a6b0ade584e951aa0f39fe9856b3ef0e6bb33af123dd4b8ce6757b03cb.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/cards.self-b1de04b6f5f525d63199f556bb55d5b8bdae7170b91bfcb503958bc8ed10945b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/chips.self-9b19ca899ba360746581059852bf2a40b3338402eef9df9a7806efd8578056dd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/pushpin.self-101d3fec3225f47ac0da9bd501200d30f92f97f70fb15500c835cb850c962816.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/buttons.self-fc0951c300b1984a00694eabc8c451531be448d646ac073b05e4d2fbf7209302.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/transitions.self-c527b205edfdd1f961487c4c7beaf83c335262accb4dff964341a86eb60fd2f2.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/scrollFire.self-9fb128253d776689dfe2091470e36d2e94c13c6340700135ee679aa20148dffd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.self-7a9d1216fe1172f8e8fd78fb86cfd4da25c909ebd6983cba5da20817d437d92b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.date.self-5924b278beda2df8570f137f72b37e2d0f516acbc11a0994d1abb74380f078ef.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/character_counter.self-8bb854e15067a96db5bff6896d1d9435e4df83cf5bf6877a1d606940661d2588.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/carousel.self-6f3b9002af3ab4d871a03a44d2e174370720ab31f19a4ee543c1904c32e2befa.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize-sprockets.self-4691589913babdfbd3fb736895105a8e826d4abde842e6d1e8dd2d188e255bc7.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/materialize/extras/nouislider.self-18d2d5ad521555c564cc69b1c153247aedf8c99609e154dc0bf963a5b3d7ede1.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:31 -0700
+
+
+Started GET "/users/10" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 63ms (Views: 62.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-5e4b2b57890e291613093002a811a2771f15e499e71a74caa7949f33cbc526ee.css?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/init.self-13192c9d13ecca35bd2c0b77d1b392be29a7ff05e660fc46d1499159f3a80d11.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/listings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/initial.self-79f269ead2aeaa809299033919f9128fa0d9700d0248cad0dcd6442ce43dc389.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/jquery.easing.1.3.self-0170bc905fbddc075a56bdccce1be6a58f3713a14137b607ba9bd9f96fd7835f.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/animation.self-a1028b0bcf2e26331bedf7b90e81103f0707e69fdec488aa951de94b51987767.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/velocity.min.self-5adbb81af5c205a959e06198156b4b31fcd57f02c592e3fb096d7b74e8f401a6.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/hammer.min.self-bf8bdb0953b1a135f96716e362e1f7a8e64168c914fa77ca31973bb70e57a731.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/jquery.hammer.self-73fd69102f356b9abfc9ee242b19895f62454f42cfcfa1f066be71d2c8f41c7a.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/global.self-90649deff3358499c5859330da1363eea3e2bef75c80df5940f3894778f95027.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/collapsible.self-4c13fea644257c8f9384721f7d3bc27bced51754ddf3602b56093e2450a5d9c2.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/dropdown.self-846e8151c8bb8f7e39464f96bd95d48a37ff9831d8f478b6bdcbd563dd2534f0.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/leanModal.self-127e920c37478ac94207994c34d28e40b2d44817a0d93176ed325bdbee80863e.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/materialbox.self-8572736f9d17261189da8a9fc91555d63b29498f4f8665328e28261c7c4cdb68.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/parallax.self-7ac34f0f3dcef83deee116ea473a2770cec13e07c8e0dcce08cc2372bbe295d3.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/tabs.self-0eee47c7ae3f1cfcf49b9619bb067eaf4fa75379be3b78469a0120a8bf972bd3.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/tooltip.self-df3538fd067523c8b7f4d50e060340ec0b551ebaba9733e157c404df9a96a185.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/waves.self-26e9b9cfaa9ccbc292ed510f654bd279d69695f5337a14c9800b36e92f96735b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/toasts.self-1eaa9f33c4c3b83f381997876ba6ac53899a5ca72a6b401708c32625fc553adc.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/sideNav.self-196d1801e7592bfd857227ce793d1de69b06fb6ca9d908f44f5618c8564a12d0.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/scrollspy.self-2d0375d44b1d864ecb8e31c25a22c4f3be766284788b0c494ec51df71e2b0e09.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/forms.self-e70e77c2b9157926587d6cfd009e8e0eedbaf059bdaa9e1bfe27b186b345598b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/slider.self-219e35a6b0ade584e951aa0f39fe9856b3ef0e6bb33af123dd4b8ce6757b03cb.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/cards.self-b1de04b6f5f525d63199f556bb55d5b8bdae7170b91bfcb503958bc8ed10945b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/chips.self-9b19ca899ba360746581059852bf2a40b3338402eef9df9a7806efd8578056dd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/pushpin.self-101d3fec3225f47ac0da9bd501200d30f92f97f70fb15500c835cb850c962816.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/buttons.self-fc0951c300b1984a00694eabc8c451531be448d646ac073b05e4d2fbf7209302.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/transitions.self-c527b205edfdd1f961487c4c7beaf83c335262accb4dff964341a86eb60fd2f2.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/scrollFire.self-9fb128253d776689dfe2091470e36d2e94c13c6340700135ee679aa20148dffd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.self-7a9d1216fe1172f8e8fd78fb86cfd4da25c909ebd6983cba5da20817d437d92b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.date.self-5924b278beda2df8570f137f72b37e2d0f516acbc11a0994d1abb74380f078ef.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/character_counter.self-8bb854e15067a96db5bff6896d1d9435e4df83cf5bf6877a1d606940661d2588.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/carousel.self-6f3b9002af3ab4d871a03a44d2e174370720ab31f19a4ee543c1904c32e2befa.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize-sprockets.self-4691589913babdfbd3fb736895105a8e826d4abde842e6d1e8dd2d188e255bc7.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/materialize/extras/nouislider.self-18d2d5ad521555c564cc69b1c153247aedf8c99609e154dc0bf963a5b3d7ede1.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:32 -0700
+
+
+Started GET "/users/10" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 439ms (Views: 400.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-5e4b2b57890e291613093002a811a2771f15e499e71a74caa7949f33cbc526ee.css?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/init.self-13192c9d13ecca35bd2c0b77d1b392be29a7ff05e660fc46d1499159f3a80d11.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/listings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/initial.self-79f269ead2aeaa809299033919f9128fa0d9700d0248cad0dcd6442ce43dc389.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/jquery.easing.1.3.self-0170bc905fbddc075a56bdccce1be6a58f3713a14137b607ba9bd9f96fd7835f.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/animation.self-a1028b0bcf2e26331bedf7b90e81103f0707e69fdec488aa951de94b51987767.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/velocity.min.self-5adbb81af5c205a959e06198156b4b31fcd57f02c592e3fb096d7b74e8f401a6.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/hammer.min.self-bf8bdb0953b1a135f96716e362e1f7a8e64168c914fa77ca31973bb70e57a731.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/jquery.hammer.self-73fd69102f356b9abfc9ee242b19895f62454f42cfcfa1f066be71d2c8f41c7a.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/global.self-90649deff3358499c5859330da1363eea3e2bef75c80df5940f3894778f95027.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/collapsible.self-4c13fea644257c8f9384721f7d3bc27bced51754ddf3602b56093e2450a5d9c2.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/dropdown.self-846e8151c8bb8f7e39464f96bd95d48a37ff9831d8f478b6bdcbd563dd2534f0.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/leanModal.self-127e920c37478ac94207994c34d28e40b2d44817a0d93176ed325bdbee80863e.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/materialbox.self-8572736f9d17261189da8a9fc91555d63b29498f4f8665328e28261c7c4cdb68.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/parallax.self-7ac34f0f3dcef83deee116ea473a2770cec13e07c8e0dcce08cc2372bbe295d3.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/tabs.self-0eee47c7ae3f1cfcf49b9619bb067eaf4fa75379be3b78469a0120a8bf972bd3.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/tooltip.self-df3538fd067523c8b7f4d50e060340ec0b551ebaba9733e157c404df9a96a185.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/waves.self-26e9b9cfaa9ccbc292ed510f654bd279d69695f5337a14c9800b36e92f96735b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/toasts.self-1eaa9f33c4c3b83f381997876ba6ac53899a5ca72a6b401708c32625fc553adc.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/sideNav.self-196d1801e7592bfd857227ce793d1de69b06fb6ca9d908f44f5618c8564a12d0.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/scrollspy.self-2d0375d44b1d864ecb8e31c25a22c4f3be766284788b0c494ec51df71e2b0e09.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/forms.self-e70e77c2b9157926587d6cfd009e8e0eedbaf059bdaa9e1bfe27b186b345598b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/slider.self-219e35a6b0ade584e951aa0f39fe9856b3ef0e6bb33af123dd4b8ce6757b03cb.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/cards.self-b1de04b6f5f525d63199f556bb55d5b8bdae7170b91bfcb503958bc8ed10945b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/chips.self-9b19ca899ba360746581059852bf2a40b3338402eef9df9a7806efd8578056dd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/pushpin.self-101d3fec3225f47ac0da9bd501200d30f92f97f70fb15500c835cb850c962816.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/buttons.self-fc0951c300b1984a00694eabc8c451531be448d646ac073b05e4d2fbf7209302.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/transitions.self-c527b205edfdd1f961487c4c7beaf83c335262accb4dff964341a86eb60fd2f2.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/scrollFire.self-9fb128253d776689dfe2091470e36d2e94c13c6340700135ee679aa20148dffd.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.self-7a9d1216fe1172f8e8fd78fb86cfd4da25c909ebd6983cba5da20817d437d92b.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/date_picker/picker.date.self-5924b278beda2df8570f137f72b37e2d0f516acbc11a0994d1abb74380f078ef.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/character_counter.self-8bb854e15067a96db5bff6896d1d9435e4df83cf5bf6877a1d606940661d2588.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/carousel.self-6f3b9002af3ab4d871a03a44d2e174370720ab31f19a4ee543c1904c32e2befa.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize-sprockets.self-4691589913babdfbd3fb736895105a8e826d4abde842e6d1e8dd2d188e255bc7.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/materialize/extras/nouislider.self-18d2d5ad521555c564cc69b1c153247aedf8c99609e154dc0bf963a5b3d7ede1.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2016-08-11 00:25:44 -0700
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2016-08-11 00:25:47 -0700
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 98ms (Views: 96.5ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2016-08-11 00:26:06 -0700
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZwYF9cFtlVP0PeB5mMzgVNtSjXKbVsa+XK+Nv1kJL8mI28ldkxKX9a9asLaVbbfcJvlqlrYbWigPsT1AIqB0/g==", "user"=>{"description"=>"The best and microsoftest farm NA!", "name"=>"Bill Gates", "email"=>"billgates@microsoft.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "location"=>"Seatlle", "is_lender"=>"true", "payment_url"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "description" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["description", "The best and microsoftest farm NA!"], ["updated_at", "2016-08-11 07:26:07.055068"], ["id", 10]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-11 00:26:07 -0700
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered listings/index.html.erb within layouts/application (18.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+Completed 200 OK in 85ms (Views: 79.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2016-08-11 00:26:11 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 0.3ms)
