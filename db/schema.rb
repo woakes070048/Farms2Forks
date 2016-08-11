@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160811072247) do
+ActiveRecord::Schema.define(version: 20160811181519) do
 
   create_table "listings", force: :cascade do |t|
     t.string   "tool"
@@ -53,6 +53,18 @@ ActiveRecord::Schema.define(version: 20160811072247) do
     t.integer  "bio_file_size"
     t.datetime "bio_updated_at"
     t.string   "description"
+    t.string   "xphoto_file_name"
+    t.string   "xphoto_content_type"
+    t.integer  "xphoto_file_size"
+    t.datetime "xphoto_updated_at"
+    t.string   "yphoto_file_name"
+    t.string   "yphoto_content_type"
+    t.integer  "yphoto_file_size"
+    t.datetime "yphoto_updated_at"
+    t.string   "zphoto_file_name"
+    t.string   "zphoto_content_type"
+    t.integer  "zphoto_file_size"
+    t.datetime "zphoto_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

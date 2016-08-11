@@ -9,14 +9,15 @@
     <div class="row"  style="padding: 10px; background-color: #ede7f6; border-radius: 10px;">
 
       <div class="col s4">
-          <img src="http://il5.picdn.net/shutterstock/videos/7062448/thumb/7.jpg?i10c=img.resize(height:160)" alt="" style="width: 250px; border-radius: 5px;" />
+        <%= image_tag(current_user.xphoto.url(:medium)) %>
       </div>
       <div class="col s4">
-          <img src="http://il2.picdn.net/shutterstock/videos/2780119/thumb/1.jpg" alt="" style="width: 250px; border-radius: 5px;" />
+        <%= image_tag(current_user.yphoto.url(:medium)) %>
       </div>
       <div class="col s4">
-          <img src="http://il6.picdn.net/shutterstock/videos/9192695/thumb/5.jpg?i10c=img.resize(height:160)" alt="" style="width: 250px; border-radius: 5px;" />
+        <%= image_tag(current_user.zphoto.url(:medium)) %>
       </div>
+      
     </div>
 
     <div class="row">
