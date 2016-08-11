@@ -1,4 +1,4 @@
-[![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg?maxAge=2592000)]() [![VersionEye](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)]() [![Gems](https://img.shields.io/gem/u/raphink.svg?maxAge=2592000)]() 
+[![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg?maxAge=2592000)]() [![VersionEye](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)]() [![Gems](https://img.shields.io/gem/u/raphink.svg?maxAge=2592000)]() [![GitHub issues](https://img.shields.io/github/issues/mAzurkovic/Farms2Forks.svg)](https://github.com/mAzurkovic/Farms2Forks/issues)
 
 ![Farms2Forks](http://i.imgur.com/oP1pDee.png)
 
