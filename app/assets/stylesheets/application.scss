@@ -1,11 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Varela+Round);
-@import 'materialize';
-@import "materialize/extras/nouislider";
-//@import "bootstrap-sprockets";
-//@import "bootstrap";
+//@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+//@import 'materialize';
+//@import "materialize/extras/nouislider";
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 * {
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #notice-wrapper {
@@ -25,6 +26,25 @@
   }
 }
 
+h1, h2, h3 {
+  text-align: center;
+}
+
 .show_img {
   border-radius: 5px;
+}
+
+.prof-img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.textareabytes {
+  width: 100%;
+}
+
+#footer {
+  text-align: center;
+  opacity: 0.4;
+  background-color: grey;
 }

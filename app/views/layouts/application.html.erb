@@ -9,40 +9,7 @@
 </head>
 <body>
 
-<nav class="deep-purple lighten-1" role="navigation">
-  <div class="nav-wrapper container">
-    <a id="logo-container" href="/" class="brand-logo"><b>Farms2Forks</b></a>
-    <% if user_signed_in? %>
-    <ul class="right hide-on-med-and-down">
-
-      <% if current_user.is_lender %>
-        <li><a href="/listings/new">Add a Food</a></li>
-      <% end %>
-
-      <ul id="dropdown1" class="dropdown-content">
-        <li><%= link_to 'Profile', current_user %></li>
-        <li><a href="#">Messages</a></li>
-        <li><%= link_to 'Settings', edit_user_registration_path %></li>
-        <li class="divider"></li>
-        <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete  %></li>
-      </ul>
-      <li><a class="dropdown-button" data-activates="dropdown1"><%= current_user.name %><i class="material-icons right">arrow_drop_down</i></a></li>
-    </ul>
-    <% else %>
-    <ul class="right hide-on-med-and-down">
-      <li><%= link_to "Sign In", new_user_session_path %></li>
-      <li><%= link_to "Become a Farmer", new_user_registration_path %></li>
-      <li><%= link_to "Become a Fork", new_user_registration_path %></b></li>
-    </ul>
-    <% end %>
-    <ul id="nav-mobile" class="side-nav">
-      <li><a href="#">Navbar Link</a></li>
-    </ul>
-    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-  </div>
-</nav>
-
-<!--<nav class="navbar navbar-default" style="border-radius: 0 !important;">
+<nav class="navbar navbar-default" style="border-radius: 0 !important;">
   <div class="container-fluid" style="width: 70%">
       <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -96,44 +63,15 @@
   <div id="notice-wrapper">
     <p class="alert"><%= alert %></p>
   </div>
-<% end %> -->
+<% end %>
 
   <%= yield %>
 
 </body>
-<footer class="page-footer deep-purple lighten-1">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Farms2Forks</h5>
-        <p class="grey-text text-lighten-4">Farms2Forks is run by several students that are reaaly nice and cool people. When you support Farms2Forks, you support food insecurity.</p>
 
-
-      </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Settings</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Account</a></li>
-          <li><a class="white-text" href="#!">Contact Us</a></li>
-          <li><a class="white-text" href="#!">Support Us</a></li>
-        </ul>
-      </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Connect</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Facebook</a></li>
-          <li><a class="white-text" href="#!">Twitter</a></li>
-          <li><a class="white-text" href="#!">LinkedIn</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">
-    Copyright (c) 2016 Copyright AAO All Rights Reserved. <a class="brown-text text-lighten-3" href="/">Farms2Forks</a>
-    </div>
-  </div>
-</footer>
+<div class="footer navbar-fixed-bottom" id="footer">
+  Copyright (c) 2016 Copyright AAO All Rights Reserved.
+</div>
 
 <script>
   $(document).ready(function() {

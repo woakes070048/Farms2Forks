@@ -1,91 +1,123 @@
-<div class="container">
+<div class="page-header">
+  <h1>Settings <small>Edit your profile and account</small></h1>
+</div>
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Account Settings</h4>
+      </div>
+      <div class="modal-body" style="width: 40%; display:table; margin: 0 auto;">
 
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= devise_error_messages! %>
+
+          <div class="field">
+            <%= f.label :name %><br />
+            <%= f.text_field :name, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true %>
+          </div>
+
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+
+          <div class="field">
+            <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+            <%= f.password_field :current_password, autocomplete: "off" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :location %><br />
+            <%= f.text_field :location %>
+          </div>
+
+          <div id="check"><%= f.check_box :is_lender, {}, true %> <%= f.label :is_lender, "Become a Farmer?" %> </div>
+
+          <div class="field" id="paypal" style="display:none;">
+            <%= f.label :payment_url %><br />
+            <%= f.text_field :payment_url %>
+          </div>
+
+        <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <span class="action"><%= f.submit "Update", :class => "btn btn-primary" %></span>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+<ul class="nav nav-tabs" style="width: 40%; display:table; margin: 0 auto;">
+  <li role="presentation" class="active"><a href="#">Profile</a></li>
+  <li role="presentation" data-toggle="modal" data-target="#myModal"><a href="#">Account</a></li>
+</ul>
+
+<h3>Profile Settings</h3>
+
+<div class="" style="width: 40%; display:table; margin: 0 auto;">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
+  <div class="field" style="width: 100%;">
     <%= f.label "Farm Description" %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area :description, :class => "textareabytes" %>
   </div>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <h5>Add Farm Photos</h5>
+  <br>
   <div class="row">
-    <div class="col s3">
+    <div class="col-md-4">
       <%= f.label "1st Farm Photo" %><br />
       <%= f.file_field :xphoto %>
     </div>
 
-    <div class="col s3">
+    <div class="col-md-4">
       <%= f.label "2nd Farm Photo" %><br />
       <%= f.file_field :yphoto %>
     </div>
 
-    <div class="col s3">
+    <div class="col-md-4">
       <%= f.label "3rd Farm Photos" %><br />
       <%= f.file_field :zphoto %>
     </div>
   </div>
-
-  <h5>Add a Profile Picture</h5>
-
+  <br>
   <div class="field">
     <%= f.label "Profile Picture" %><br />
     <%= f.file_field :avatar %>
   </div>
-
   <br>
-
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label "Type password to confirm" %><br>
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
-
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
-
-  <div id="check"><%= f.check_box :is_lender, {}, true %> <%= f.label :is_lender, "Become a Farmer?" %> </div>
-
-  <div class="field" id="paypal" style="display:none;">
-    <%= f.label :payment_url %><br />
-    <%= f.text_field :payment_url %>
-  </div>
-
+  <br>
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
 <% end %>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<!--<%= link_to "Back", :back %>-->
+</div>
 
 <script type="text/javascript">
 
