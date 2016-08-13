@@ -29,6 +29,11 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 # Materialize CSS gem
 gem 'materialize-sass'
 
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+
+gem 'ratyrate'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
