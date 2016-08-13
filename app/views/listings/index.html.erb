@@ -2,7 +2,18 @@
   <h1>Listings <small>Find the freshest foods</small></h1>
 </div>
 
+<%= form_tag(listings_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+<%= submit_tag "Search" %>
+<% end %>
+
 <div class="card-panel" style="width: 40%; display:table; margin: 0 auto;">
+
+  <% @tools.to_a %>
+  <% if params[:search] %>
+    <div id="query_return">results for "<b><%= params[:search] %></b>"</div>
+  <% end %>
+
 <% @tools.each do |listing| %>
 
 <div class="panel panel-default">
@@ -22,18 +33,6 @@
     </div>
   </div>
 </div>
-
-    <!--<div class="row">
-      <div class="col s2">
-        <img class="circle"><%= image_tag listing.image.url(:thumb), :class => 'show_img' %></img>
-      </div>
-
-      <div class="col s9">
-        <span class="title"><%= link_to listing.tool, listing %></span>
-        <div> $<%= listing.price %></div>
-        <div><%= listing.user.location %></div>
-        <div>Posted <%= time_ago_in_words(listing.created_at) %> ago by <%= link_to listing.user.name, listing.user %></div>
-      </div> -->
 <% end %>
 </div>
 </div>

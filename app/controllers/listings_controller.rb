@@ -6,7 +6,13 @@ class ListingsController < ApplicationController
 
   # Default page that displays the food listings in order of creation
   def index
-    @tools = Listing.all.order('created_at DESC')
+    @tools = Listing.all
+    # Orders posts (Default is newst -> oldest) and sets paginate paramaters
+    @tools = Listing.order("created_at DESC")
+
+    if params[:search]
+      @tools = Listing.where('tool LIKE ?', "%#{params[:search]}%")
+    end
   end
 
   def new
