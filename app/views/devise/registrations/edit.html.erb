@@ -41,31 +41,24 @@
           </div>
 
           <div class="field">
-            <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-            <%= f.password_field :current_password, autocomplete: "off" %>
-          </div>
-
-          <div class="field">
             <%= f.label :location %><br />
             <%= f.text_field :location %>
           </div>
 
-          <div id="check"><%= f.check_box :is_lender, {}, true %> <%= f.label :is_lender, "Become a Farmer?" %> </div>
-
-          <div class="field" id="paypal" style="display:none;">
-            <%= f.label :payment_url %><br />
-            <%= f.text_field :payment_url %>
+          <div class="field">
+            <%= f.label "Type password to confirm" %> <i></i><br />
+            <%= f.password_field :current_password, autocomplete: "off" %>
           </div>
 
-        <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+          <br>
 
+          <div class="actions">
+            <%= f.submit "Update", :class => "btn btn-primary" %>
+          </div>
+        <% end %>
 
+        <!--<p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => "btn btn-danger" %></p>-->
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <span class="action"><%= f.submit "Update", :class => "btn btn-primary" %></span>
-      </div>
-    <% end %>
     </div>
   </div>
 </div>
@@ -114,7 +107,7 @@
   </div>
   <br>
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", :class => "btn btn-primary" %>
   </div>
 <% end %>
 </div>

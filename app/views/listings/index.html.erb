@@ -2,18 +2,11 @@
   <h1>Listings <small>Find the freshest foods</small></h1>
 </div>
 
-<%= form_tag(listings_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-<%= submit_tag "Search" %>
-<% end %>
-
 <div class="card-panel" style="width: 40%; display:table; margin: 0 auto;">
-
   <% @tools.to_a %>
   <% if params[:search] %>
     <div id="query_return">results for "<b><%= params[:search] %></b>"</div>
   <% end %>
-
 <% @tools.each do |listing| %>
 
 <div class="panel panel-default">
