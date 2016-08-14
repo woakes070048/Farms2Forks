@@ -1,17 +1,17 @@
-<h2 class="center" style="color: #7e57c2"><%= @tool.tool %></h2>
+<h2 class="center" style="color: #7e57c2"><%= @food.tool %></h2>
 <div class="container">
 
 <div class="card-panel">
 
 <div class="row">
 
-  <div class="col s5"><%= image_tag @tool.image.url(:medium), :class => 'show_img' %></div>
+  <div class="col s5"><%= image_tag @food.image.url(:medium), :class => 'show_img' %></div>
 
   <div class="col s7">
-  <div><b>Price: </b> $<%= @tool.price %></div>
+  <div><b>Price: </b> $<%= @food.price %></div>
 
-  <div><b>Farm location:</b> <%= @tool.user.location %></div>
-  <div>Posted by <%= link_to @tool.user.name, @tool.user %></div>
+  <div><b>Farm location:</b> <%= @food.user.location %></div>
+  <div>Posted by <%= link_to @food.user.name, @food.user %></div>
   <i class='material-icons'>star</i><i class='material-icons'>star</i><i class='material-icons'>star</i><i class='material-icons'>star</i>
   <br>
   <br>
@@ -19,9 +19,9 @@
 
   <br>
 
-  <% if @tool.user == current_user %>
-    <%= link_to 'Edit', edit_listing_path(@tool) %>
-    <%= link_to 'Delete', listing_path(@tool), method: :delete, data: { confirm: "You are about to delete this listing" } %>
+  <% if @food.user == current_user %>
+    <%= link_to 'Edit', edit_listing_path(@food) %>
+    <%= link_to 'Delete', listing_path(@food), method: :delete, data: { confirm: "You are about to delete this listing" } %>
   <% end %>
   </div>
 
@@ -34,7 +34,7 @@
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>Bite This?</h4>
-      <p><b>Payment link:</b> <a><%= @tool.user.payment_url %></a></p>
+      <p><b>Payment link:</b> <a><%= @food.user.payment_url %></a></p>
       <p>A confirmation of the transaction has been sent to your email.</p>
       <p>The food will be dilivered to your door on <b>24/07/2016</b> at approximatley <b>4:00pm</b>.</p>
       <p>Enjoy the food!</p>

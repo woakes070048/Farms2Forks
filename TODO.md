@@ -13,7 +13,7 @@
 * Add field to `Listing` model that has quantaty/availability of food
 * Bursery style application for food insecure forks
 * Add search capability to query food listings :ballot_box_with_check:
-* Add Farmers recent listings to profile page
+* Add Farmers recent listings to profile page :ballot_box_with_check:
 
 ## Design
 

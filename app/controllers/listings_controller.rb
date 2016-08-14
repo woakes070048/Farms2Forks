@@ -6,48 +6,48 @@ class ListingsController < ApplicationController
 
   # Default page that displays the food listings in order of creation
   def index
-    @tools = Listing.all
+    @foods = Listing.all
     # Orders posts (Default is newst -> oldest) and sets paginate paramaters
-    @tools = Listing.order("created_at DESC")
+    @foods = Listing.order("created_at DESC")
 
     if params[:search]
-      @tools = Listing.where('tool LIKE ?', "%#{params[:search]}%")
+      @foods = Listing.where('tool LIKE ?', "%#{params[:search]}%")
     end
   end
 
   def new
-    @tool = current_user.listings.build
+    @food = current_user.listings.build
   end
 
   # When user wants to create a new food listing
   def create
-    @tool = current_user.listings.build(query_p)
-    if @tool.save
-      redirect_to @tool
+    @food = current_user.listings.build(query_p)
+    if @food.save
+      redirect_to @food
     else
       render 'new'
     end
   end
 
   def show
-    @tool = Listing.find(params[:id])
+    @food = Listing.find(params[:id])
   end
 
   def edit
-    @tool = Listing.find(params[:id])
+    @food = Listing.find(params[:id])
   end
 
   def update
-    @tool = Listing.find(params[:id])
-    if @tool.update(query_p)
-      redirect_to @tool
+    @food = Listing.find(params[:id])
+    if @food.update(query_p)
+      redirect_to @food
     else
       render 'edit'
     end
   end
 
   def destroy
-    @tool.destroy
+    @food.destroy
     respond_to do |format|
       format.html { redirect_to root_path, notice: 'Link was successfully destroyed.' }
       format.json { head :no_content }
@@ -63,7 +63,7 @@ class ListingsController < ApplicationController
   end
 
   def find_post
-    @tool = Listing.find(params[:id])
+    @food = Listing.find(params[:id])
   end
 
   def query_p
