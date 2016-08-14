@@ -10,18 +10,21 @@
 <% @tools.each do |listing| %>
 
 <div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to listing.tool, listing %></h3>
+  <div class="panel-heading" style="background-color:#c8e6c9;">
+    <h3 class="panel-title" style="font-weight: 500px;"><%= link_to listing.tool, listing %></h3>
   </div>
   <div class="panel-body">
     <div class="row">
       <div class="col-md-3"><%= image_tag listing.image.url(:thumb), :class => 'show_img' %></div>
-      <div class="col-md-9">
-        <div>Selling for $<%= listing.price %></div>
+      <div class="col-md-6" style="font-size: 15px;">
         <div>Farm located in <strong><%= listing.user.location %></strong></div>
         <div>Farmer rating:<%= rating_for listing.user, "user" %></div>
         <div>Posted <%= time_ago_in_words(listing.created_at) %> ago by <%= link_to listing.user.name, listing.user %>
           <span><%= image_tag listing.user.avatar.url(:thumb), :class => "prof-img" %></span></div>
+      </div>
+      <div class="col-md-3">
+        <div style="text-align: center;">Selling for </div>
+        <p style="font-size:36px; text-align: center;">$<%= listing.price %></p>
       </div>
     </div>
   </div>
