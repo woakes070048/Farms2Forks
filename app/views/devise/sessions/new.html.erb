@@ -1,39 +1,54 @@
-<div class="container" style="width: 50%;">
-
-<h2>Log in</h2>
-
+<div class="container">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <%= devise_error_messages! %>
+      <div class="row main">
+        <div class="main-login main-center">
+                    <h1 class="title">Welcome Back</h1>
+                    <hr class="colorgraph">
+          <form class="form-horizontal" method="post" action="#">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+            <div class="form-group">
+              <label for="email" class="cols-sm-2 control-label">Your Email</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                    <div class="field">
+                      <%= f.email_field :email, :class => "form-control"  %>
+                    </div>
+                </div>
+              </div>
+            </div>
 
-<div class="row">
-  <div class="col s4">
-    <div class="btn waves-effect waves-light teal lighten-1">
-      <%= f.submit "Log in" %>
-    </div>
-  </div>
-  <div class="col s4">
-    <%= render "devise/shared/links" %>
-  </div>
-  <div class="col s4">
-    <% if devise_mapping.rememberable? -%>
-      <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+            <div class="form-group">
+              <label for="password" class="cols-sm-2 control-label">Password</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                    <div class="field">
+                      <%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <% if devise_mapping.rememberable? -%>
+             <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+            <% end -%>
+
+            <div class="form-group ">
+              <%= f.submit "Sign in", :class => "btn btn-primary btn-lg btn-block login-button"%>
+            </div>
+            <div class="login-register">
+                    <%= render "devise/shared/links" %>
+            </div>
+          </form>
+        </div>
       </div>
-    <% end -%>
-  </div>
-</div>
+    <% end %>
+    </div>
 
-<% end %>
-
-</div>
 
 <br><br><br><br><br><br><br>

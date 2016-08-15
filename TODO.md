@@ -26,6 +26,8 @@
 * Redesign/reformat user profile page (with images) :ballot_box_with_check:
 * Redesign navbar :ballot_box_with_check:
 * Add `how it works` page @ landing page
-* Improve sign-up form and sign-in form
+* Improve sign-up form and sign-in form :ballot_box_with_check:
 * Add user sign up progress (like Quora or LinkedIn)
 * Improve `show` view :ballot_box_with_check:
+* Footer
+* 
