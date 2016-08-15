@@ -1,3 +1,51 @@
-<h2 class="center" style="color: #7e57c2">New Food Listing</h2>
-<%= render 'tool' %>
+<div class="row main">
+	<%= form_for @food, html: { multipart: true } do |i| %>
+        <div class="main-login main-center">
+                    <h1 class="title">Add a Food</h1>
+                    <hr class="colorgraph">
+          <form class="form-horizontal">
+          
+            <div class="form-group">
+              <label for="email" class="cols-sm-2 control-label">Food Title</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-pencil fa" aria-hidden="true"></i></span>
+                    <div class="field">
+                      <%= i.text_field :tool, :class => "form-control"  %>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="cols-sm-2 control-label">Price</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-usd fa" aria-hidden="true"></i></span>
+                    <div class="field">
+                      <%= i.text_field :price, :class => "form-control"  %>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="cols-sm-2 control-label">Image</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                    <div class="field">
+                      <%= i.file_field :image %>
+                    </div>
+                </div>
+              </div>
+            </div>
+  			<div>
+    			<%= i.submit "Create listing", :class => "btn btn-primary btn-lg btn-block login-button"%>
+  			</div>
+          </form>
+        </div>
+        <% end %>
+      </div>
+
+
 <br><br><br>

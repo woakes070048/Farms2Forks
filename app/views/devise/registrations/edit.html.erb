@@ -1,7 +1,10 @@
 <div class="page-header">
-  <h1>Settings <small>Edit your profile and account</small></h1>
+  <h1 class="heading">Settings <small>Edit your profile and account</small></h1>
 </div>
 
+
+
+<div class="well" style="width: 60%; margin: 0 auto; display: block;">
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -68,14 +71,14 @@
   </div>
 </div>
 
-<ul class="nav nav-tabs" style="width: 40%; display:table; margin: 0 auto;">
+<ul class="nav nav-tabs" style="width: 90%; display:table; margin: 0 auto;">
   <li role="presentation" class="active"><a href="#">Profile</a></li>
   <li role="presentation" data-toggle="modal" data-target="#myModal"><a href="#">Account</a></li>
 </ul>
 
-<h3>Profile Settings</h3>
+<h3 class="heading"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Profile Settings</h3>
 
-<div class="" style="width: 40%; display:table; margin: 0 auto;">
+<div class="" style="width: 90%; display:table; margin: 0 auto;">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
@@ -83,10 +86,10 @@
     <%= f.label "Farm Description" %><br />
     <%= f.text_area :description, :class => "textareabytes" %>
   </div>
-
+<br />
   <div class="field">
-    <%= f.label "A short tag line" %><br />
-    <%= f.text_field :short %>
+    <%= f.label "A short tag line" %>
+    <%= f.text_field :short, :class => "textareabytes" %>
   </div>
 
   <br>
@@ -122,6 +125,9 @@
   </div>
 <% end %>
 </div>
+</div>
+
+<br><br>
 
 <script type="text/javascript">
 

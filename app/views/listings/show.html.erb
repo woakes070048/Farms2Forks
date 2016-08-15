@@ -12,7 +12,13 @@
                             <h3 class="user-name"><%= @food.tool %></h3>
                             <p><strong>Food located in <span class="user-dept"><%= @food.user.location %></span></strong></p>
                             <p><span class="user-year">Posted <%= time_ago_in_words(@food.created_at) %> ago by <%= link_to @food.user.name, @food.user %>
-          <span><%= image_tag @food.user.avatar.url(:thumb), :class => "prof-img" %></p>
+                             <span><%= image_tag @food.user.avatar.url(:thumb), :class => "prof-img" %></p>
+                        <% if current_user == @food.user %>
+                            <%= link_to 'Edit Food', edit_listing_path %>
+                            <span> | </span>
+                            <%= link_to 'Delete Food', @food, :method => :delete, :confirm => "Are you sure?" %>
+                        <% end %>
+
                         </div>
                     </div>
                 </div>

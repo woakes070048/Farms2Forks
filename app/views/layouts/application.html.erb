@@ -30,9 +30,9 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <form class="navbar-form navbar-left" style="padding-top: 3px;">
-        <%= form_tag(listings_path, :method => "get", id: "search-form") do %>
+        <%= form_tag(listings_path, :method => "get", id: "search-form", :class => "form-control") do %>
         <%= text_field_tag :search, params[:search], placeholder: "Search for a food listing" %>
-        <%= submit_tag "Search" %>
+        <%= submit_tag "Go!" %>
         <% end %>
       </form>
 
@@ -65,7 +65,7 @@
 
 <% if notice %>
   <div id="notice-wrapper">
-    <p class="notice"><%= notice %></p>
+    <p class="notice"><i class="fa fa-check-circle" aria-hidden="true"></i> <%= notice %></p>
   </div>
 <% elsif alert %>
   <div id="notice-wrapper">
