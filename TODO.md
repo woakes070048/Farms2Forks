@@ -14,6 +14,8 @@
 * Bursery style application for food insecure forks
 * Add search capability to query food listings :ballot_box_with_check:
 * Add Farmers recent listings to profile page :ballot_box_with_check:
+* Add phone number field to Farmer model
+* Add 'short bio' / 'farmer moto' to Farmer model :ballot_box_with_check:
 
 ## Design
 
@@ -23,3 +25,4 @@
 * Redesign navbar :ballot_box_with_check:
 * Add `how it works` page @ landing page
 * Improve sign-up form and sign-in form
+* Add user sign up progress (like Quora or LinkedIn)

@@ -1,81 +1,103 @@
 <br>
 
-<div class="container">
-    <div class="card-panel">
-
-        <h2 class="center" style="color: #7e57c2;"><%= image_tag(@user.avatar.url(:thumb)) %><%= @user.name %></h2>
-
-        <h5>
-            <b>Farm Photos</b>
-        </h5>
-        <div class="row" style="padding: 10px; background-color: #ede7f6; border-radius: 10px;">
-
-            <div class="col s4">
-                <%= image_tag(@user.xphoto.url(:medium)) %>
+<div class="container" style="width: 50%">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="panel panel-default profile-panel">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-12 text-center" >
+                            <%= image_tag(@user.avatar.url(:thumb), :class => "img-circle") %>
+                        </div>
+                        <div class="col-sm-9 col-xs-12 user-info-box">
+                            <% if current_user == @user %>
+                            <a class="btn btn-info pull-right btn-edit" href="/users/edit">
+                                <i class="fa fa-edit"></i>
+                                Edit…
+                            </a>
+                            <% end %>
+                            <h3 class="user-name"><%= @user.name %></h3>
+                            <p><strong><span class="user-dept"><%= rating_for @user, "user" %></span></strong></p>
+                            <p><strong><span class="user-dept"><%= @user.short %></span></strong></p>
+                            <p><span class="user-year"><strong>Bio: </strong></span><span class="user-sem"><%= @user.description %></span></p>
+                            <p><a href="#more-info-panel" data-toggle="collapse" data-target="#more-info-panel" class="more-info-toggle">More ▼</a></p>
+                            <div id="more-info-panel" class="collapse out">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <p><strong><i class="fa fa-envelope"></i> E-mail: </strong><span class="user-email"><%= @user.email %></span></p>
+                                        <p><strong><i class="fa fa-phone-square"></i> Phone: </strong><span class="user-phone">9434000000</span></p>
+                                        <p><strong><i class="fa fa-users"></i> Location: </strong><span class=""><%= @user.location %></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col s4">
-                <%= image_tag(@user.yphoto.url(:medium)) %>
-            </div>
-            <div class="col s4">
-                <%= image_tag(@user.zphoto.url(:medium)) %>
-            </div>
+            
+            <div class="panel panel-default achievements-panel">
+                <div class="panel-body">
+                    <h3><i class="fa fa-picture-o fa-lg"></i> Farm Photos</h3>
+                    <hr class="colorgraph">
 
-        </div>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-md-4"><td><%= image_tag(@user.xphoto.url(:medium), :class => "prof-des-img") %></td></div>
+                        <div class="col-md-4"><td><%= image_tag(@user.yphoto.url(:medium), :class => "prof-img-des-img") %></td></div>
+                        <div class="col-md-4"><td><%= image_tag(@user.zphoto.url(:medium), :class => "prof-des-img") %></td></div>
+                        </div>
 
-        <div class="row">
-            <div class="col s8">
-                <h5>
-                    <b>Bio</b>
-                </h5>
-                <p><%= @user.description %></p>
-            </div>
-            <div class="col s4">
-                <% if @user.is_lender %>
-                <div></div>
-            <% else %>
-                <div></div>
-                <% end %>
-
-                <div>Rating:<%= rating_for @user, "user" %></div>
-
-                <div><%= @user.location %></div>
-                <div>
-                    <a href="#"><%= @user.payment_url %></a>
+                    </table>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="small-2 large-2 columns"></div>
-                <br>
-                <div class="small-2 large-4 columns"></div>
-            </div>
-
-            <% @foods.each do |listing| %>
-
-            <div class="panel panel-default">
-              <div class="panel-heading" style="background-color:#c8e6c9;">
-                <h3 class="panel-title" style="font-weight: 500px;"><%= link_to listing.tool, listing %></h3>
-              </div>
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-md-3"><%= image_tag listing.image.url(:thumb), :class => 'show_img' %></div>
-                  <div class="col-md-6" style="font-size: 15px;">
-                    <div>Farm located in <strong><%= listing.user.location %></strong></div>
-                    <div>Farmer rating:<%= rating_for listing.user, "user" %></div>
-                    <div>Posted <%= time_ago_in_words(listing.created_at) %> ago by <%= link_to listing.user.name, listing.user %>
-                      <span><%= image_tag listing.user.avatar.url(:thumb), :class => "prof-img" %></span></div>
-                  </div>
-                  <div class="col-md-3">
-                    <div style="text-align: center;">Selling for </div>
-                    <p style="font-size:36px; text-align: center;">$<%= listing.price %></p>
-                  </div>
+            <div class="panel panel-default academic-panel">
+                <div class="panel-body">
+                    <h3><i class="fa fa-book fa-lg"></i> Recent Listings</h3>
+                    <hr class="colorgraph">
+                    </div>
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        </thead>
+                        <tbody style="text-align: center;">
+                        <% @foods.each do |listing| %>
+                            <tr>
+                                <td><%= image_tag listing.image.url(:thumb), :class => 'prof-food' %></td>
+                                <td style="line-height:50px;"><%= link_to listing.tool, listing %></td>
+                                <td style="line-height:50px;">$ <%= listing.price %></td>
+                                <td style="line-height:50px;">Posted <%= time_ago_in_words(listing.created_at) %></td>
+                            </tr>
+                        <% end %>
+                        </tbody>
+                    </table>
                 </div>
-              </div>
             </div>
-            <% end %>
-
 
         </div>
-
     </div>
 </div>
+
+<br><br>
+
+<script type="text/javascript">
+    $('#more-info-panel').on('hide.bs.collapse', function (e) {
+    $('.more-info-toggle').html('More ▼');
+});
+
+$('#more-info-panel').on('show.bs.collapse', function (e) {
+    $('.more-info-toggle').html('Less ▲');
+});
+
+$('#edit-profile').on('show.bs.modal', function (e) {
+    $('#user-name').val($('.user-name').html());
+    $('#user-dept').val($('.user-dept').html());
+    $('#user-sem').val($('.user-sem').html());
+    $('#user-year').val($('.user-year').html());
+    $('#user-enrollment-no').val($('.user-enrollment-no').html());
+    $('#user-course').val($('.user-course').html());
+    $('#user-stream').val($('.user-stream').html());
+    $('#user-admission-year').val($('.user-admission-year').html());
+    $('#user-dob').val($('.user-dob').html());
+    $('#user-email').val($('.user-email').html());
+    $('#user-phone').val($('.user-phone').html());
+})
+</script>

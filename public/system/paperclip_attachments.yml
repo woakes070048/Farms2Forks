@@ -1,0 +1,18 @@
+---
+:User:
+  :avatar:
+  - :medium
+  - :thumb
+  :xphoto:
+  - :medium
+  - :thumb
+  :yphoto:
+  - :medium
+  - :thumb
+  :zphoto:
+  - :medium
+  - :thumb
+:Listing:
+  :image:
+  - :medium
+  - :thumb
