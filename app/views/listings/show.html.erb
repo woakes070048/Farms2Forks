@@ -1,60 +1,66 @@
-<h2 class="center" style="color: #7e57c2"><%= @food.tool %></h2>
-<div class="container">
+<div class="container" style="width: 60%;">
+    <div class="row">
+        <div class="col-md-9 col-sm-12">
+            <div class="panel panel-default profile-panel">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-12 text-center" >
+                            <%= image_tag @food.image.url(:thumb), :class => 'img-circle' %>
+                            <p style="font-size:36px; text-align: center;">$<%= @food.price %></p>
+                        </div>
+                        <div class="col-sm-9 col-xs-12 user-info-box">
+                            <h3 class="user-name"><%= @food.tool %></h3>
+                            <p><strong>Food located in <span class="user-dept"><%= @food.user.location %></span></strong></p>
+                            <p><span class="user-year">Posted <%= time_ago_in_words(@food.created_at) %> ago by <%= link_to @food.user.name, @food.user %>
+          <span><%= image_tag @food.user.avatar.url(:thumb), :class => "prof-img" %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="panel panel-default academic-panel">
+                <div class="panel-body">
+                    <h3><i class="fa fa-book fa-lg"></i> More Listings</h3>
+                    <hr class="colorgraph">
+                    </div>
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        </thead>
+                        <tbody style="text-align: center;">
+                        <% @food.user.listings.each do |listing| %>
+                            <tr>
+                                <td><%= image_tag listing.image.url(:thumb), :class => 'prof-food' %></td>
+                                <td style="line-height:50px;"><%= link_to listing.tool, listing %></td>
+                                <td style="line-height:50px;">$ <%= listing.price %></td>
+                                <td style="line-height:50px;">Posted <%= time_ago_in_words(listing.created_at) %> ago</td>
+                            </tr>
+                        <% end %>
+                        </tbody>
+                    </table>
+                </div>
 
-<div class="card-panel">
-
-<div class="row">
-
-  <div class="col s5"><%= image_tag @food.image.url(:medium), :class => 'show_img' %></div>
-
-  <div class="col s7">
-  <div><b>Price: </b> $<%= @food.price %></div>
-
-  <div><b>Farm location:</b> <%= @food.user.location %></div>
-  <div>Posted by <%= link_to @food.user.name, @food.user %></div>
-  <i class='material-icons'>star</i><i class='material-icons'>star</i><i class='material-icons'>star</i><i class='material-icons'>star</i>
-  <br>
-  <br>
-  <a id="bite" class="waves-effect waves-light btn-large light-green darken-1 modal-trigger" href="#modal1"><i class="material-icons right">swap_horiz</i>Bite This!</a>
-
-  <br>
-
-  <% if @food.user == current_user %>
-    <%= link_to 'Edit', edit_listing_path(@food) %>
-    <%= link_to 'Delete', listing_path(@food), method: :delete, data: { confirm: "You are about to delete this listing" } %>
-  <% end %>
-  </div>
-
-</div>
-
-</div>
-</div>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Bite This?</h4>
-      <p><b>Payment link:</b> <a><%= @food.user.payment_url %></a></p>
-      <p>A confirmation of the transaction has been sent to your email.</p>
-      <p>The food will be dilivered to your door on <b>24/07/2016</b> at approximatley <b>4:00pm</b>.</p>
-      <p>Enjoy the food!</p>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <div class="row">
+                
+                <!-- Panel 2 -->
+                <div class="col-md-12 col-sm-6 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-user fa-lg"></i> 
+                            About Farmer
+                        </div>
+                        <div class="panel-body" style="text-align: center;">
+                            <%= image_tag @food.user.avatar.url(:thumb), :class => "img-circle-aa" %>
+                        <div><h4><%= link_to @food.user.name, @food.user %></h4></div>
+                        <div><%= @food.user.short %></div>
+                        <div><%= rating_for @food.user, "user" %></div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-    </div>
-  </div>
+</div>
 
-
-
-
-<br><br><br><br><br><br>
-
-<script type="text/javascript">
-  var biteMe = document.getElementById('bite');
-
-  $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-  });
-
-</script>
+<br><br>

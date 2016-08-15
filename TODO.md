@@ -16,13 +16,15 @@
 * Add Farmers recent listings to profile page :ballot_box_with_check:
 * Add phone number field to Farmer model
 * Add 'short bio' / 'farmer moto' to Farmer model :ballot_box_with_check:
+* Farmers must be able to add amount of food
 
 ## Design
 
 * Colorize
 * Migrate to Bootstrap  :ballot_box_with_check:
-* Redesign/reformat user profile page (with images)
+* Redesign/reformat user profile page (with images) :ballot_box_with_check:
 * Redesign navbar :ballot_box_with_check:
 * Add `how it works` page @ landing page
 * Improve sign-up form and sign-in form
 * Add user sign up progress (like Quora or LinkedIn)
+* Improve `show` view :ballot_box_with_check:

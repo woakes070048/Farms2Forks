@@ -1,6 +1,6 @@
 <br>
 
-<div class="container" style="width: 50%">
+<div class="container" style="width: 60%">
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <div class="panel panel-default profile-panel">
@@ -11,10 +11,7 @@
                         </div>
                         <div class="col-sm-9 col-xs-12 user-info-box">
                             <% if current_user == @user %>
-                            <a class="btn btn-info pull-right btn-edit" href="/users/edit">
-                                <i class="fa fa-edit"></i>
-                                Edit…
-                            </a>
+                                <a class="pull-right" href=""><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>Edit Profile</a>
                             <% end %>
                             <h3 class="user-name"><%= @user.name %></h3>
                             <p><strong><span class="user-dept"><%= rating_for @user, "user" %></span></strong></p>
@@ -64,7 +61,7 @@
                                 <td><%= image_tag listing.image.url(:thumb), :class => 'prof-food' %></td>
                                 <td style="line-height:50px;"><%= link_to listing.tool, listing %></td>
                                 <td style="line-height:50px;">$ <%= listing.price %></td>
-                                <td style="line-height:50px;">Posted <%= time_ago_in_words(listing.created_at) %></td>
+                                <td style="line-height:50px;">Posted <%= time_ago_in_words(listing.created_at) %> ago</td>
                             </tr>
                         <% end %>
                         </tbody>

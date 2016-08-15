@@ -15,7 +15,7 @@
   </div>
   <div class="panel-body">
     <div class="row">
-      <div class="col-md-3"><%= image_tag listing.image.url(:thumb), :class => 'show_img' %></div>
+      <div class="col-md-3"><%= link_to (image_tag listing.image.url(:thumb), :class => 'show_img'), listing %></div>
       <div class="col-md-6" style="font-size: 15px;">
         <div>Farm located in <strong><%= listing.user.location %></strong></div>
         <div>Farmer rating:<%= rating_for listing.user, "user" %></div>
