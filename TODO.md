@@ -15,7 +15,7 @@
 * Add search capability to query food listings :ballot_box_with_check:
 * Add Farmers recent listings to profile page :ballot_box_with_check:
 * Add 'short bio' / 'farmer moto' to Farmer model :ballot_box_with_check:
-* Farmers must be able to add amount of food
+* Farmers must be able to add amount of food :ballot_box_with_check:
 * Phone number to Farmer model :ballot_box_with_check:
 
 ## Design

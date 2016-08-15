@@ -67,7 +67,7 @@ class ListingsController < ApplicationController
   end
 
   def query_p
-    params.require(:listing).permit(:tool, :price, :location, :image)
+    params.require(:listing).permit(:tool, :price, :location, :image, :amount)
   end
 
 end

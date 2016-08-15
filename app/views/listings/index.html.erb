@@ -23,7 +23,7 @@
           <span><%= image_tag listing.user.avatar.url(:thumb), :class => "prof-img" %></span></div>
       </div>
       <div class="col-md-3">
-        <div style="text-align: center;">Selling for </div>
+        <div style="text-align: center;"><strong><%= listing.amount %>kg</strong> for</div>
         <p style="font-size:36px; text-align: center;">$<%= listing.price %></p>
       </div>
     </div>
