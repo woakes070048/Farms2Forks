@@ -36,6 +36,11 @@
     <%= f.text_field :location %>
   </div>
 
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+
   <div id="check"><%= f.check_box :is_lender, {}, true %> <%= f.label :is_lender, "Become a Farmer?" %> </div>
 
   <div class="input-field" id="paypal" style="display:none;">

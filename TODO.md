@@ -17,6 +17,7 @@
 * Add phone number field to Farmer model
 * Add 'short bio' / 'farmer moto' to Farmer model :ballot_box_with_check:
 * Farmers must be able to add amount of food
+* Phone number to Farmer model
 
 ## Design
 
