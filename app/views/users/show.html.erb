@@ -1,5 +1,4 @@
-<br>
-
+<br><br><br><br>
 <div class="container" style="width: 60%">
     <div class="row">
         <div class="col-md-12 col-sm-12">
@@ -36,15 +35,15 @@
                 <div class="panel-body">
                     <h3><i class="fa fa-picture-o fa-lg"></i> Farm Photos</h3>
                     <hr class="colorgraph">
-
-                    <div class="row" style="text-align: center;">
-                        <div class="col-md-4"><td><%= image_tag(@user.xphoto.url(:medium), :class => "prof-des-img") %></td></div>
-                        <div class="col-md-4"><td><%= image_tag(@user.yphoto.url(:medium), :class => "prof-img-des-img") %></td></div>
-                        <div class="col-md-4"><td><%= image_tag(@user.zphoto.url(:medium), :class => "prof-des-img") %></td></div>
+                    <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4 col-xs-6"><%= image_tag(@user.xphoto.url(), :class => "img-mag") %></div>
+                        <div class="col-md-3 col-sm-4 col-xs-6"><%= image_tag(@user.yphoto.url(), :class => "img-mag") %></div>
+                        <div class="col-md-3 col-sm-4 col-xs-6"><div class="col-md-4"><%= image_tag(@user.zphoto.url(), :class => "img-mag") %></div>
                         </div>
-
-                    </table>
+                    </div>
                 </div>
+            </div>
             </div>
 
             <div class="panel panel-default academic-panel">

@@ -10,6 +10,8 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+// COLOR a886bd
+
 .img-circle-aa {
   border-radius: 50%;
   width: 50%;
@@ -92,7 +94,7 @@ strong {
 .colorgraph {
   height: 5px;
   border-top: 0;
-  background: #7e57c2;
+  background: #a886bd;
   border-radius: 5px;
 
 }
@@ -108,7 +110,11 @@ strong {
 
 /* Page styles */
 
-body {
+.land-body {
+  background-color: #fff;
+}
+
+.dd {
     padding-top: 70px;
     background: url('http://www.stripegenerator.com/generators/generate_stripes.php?fore=f8f8f8&h=30&w=20&p=20&back1=fcfcfcfdfd&back2=dddddd&gt=0&d=0&shadow=0') repeat;
     background-attachment: fixed;
@@ -178,7 +184,7 @@ input::-webkit-input-placeholder {
     padding-top: 3px;
 }
 
-.main-login{
+.main-login {
   background-color: #fff;
     /* shadows and rounded borders */
     -moz-border-radius: 2px;
@@ -206,3 +212,162 @@ input::-webkit-input-placeholder {
   font-size: 11px;
   text-align: center;
 }
+
+
+/* general styles */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* padded section */
+.pad-section {
+  padding: 50px 0;
+}
+.pad-section img {
+  width: 100%;
+}
+
+/* vertical-centered text */
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.text-vcenter h1 {
+  font-size: 4.5em;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+/* additional sections */
+#home {
+  background: url('https://hd.unsplash.com/17/unsplash_527bf5fd7f5f6_1.JPG') no-repeat center center fixed; 
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#about {
+}
+
+#services {
+  background-color: #a886bd;
+  color: #ffffff;
+}
+#services .glyphicon {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 60px;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  vertical-align: middle;
+  width: 140px;
+}
+
+#information {
+  background: url('https://hd.unsplash.com/9/fields.jpg') no-repeat center center fixed; 
+  display: table;
+  height: 800px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#information .panel {
+  opacity: 0.85;
+}
+
+#google_map {
+  height: 500px;
+}
+
+footer {
+  padding: 20px 0;
+}
+footer .glyphicon {
+  color: #333333;
+  font-size: 60px;
+}
+footer .glyphicon:hover {
+  color: #306d9f;
+}
+
+.btn-primary {
+  background-color: #8CD790;
+  border-color: #8CD790;
+  -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+
+.btn-land {
+  color: white;
+  background-color: #a886bd;
+  border-color: #a886bd;
+  -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+
+.btn-primary:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.btn-land:hover {
+  background-color: #8CD790;
+  border-color: #8CD790;
+  cursor: pointer;
+  -webkit-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.img-row {
+    margin: 80px 0px 80px 0px;
+    }
+
+.img-mag {
+    width: 250px;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    }
+
+.img-mag:hover {
+  cursor: pointer;
+  -webkit-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    transform: scale(2, 2);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.25);
+    z-index: 1;
+    }

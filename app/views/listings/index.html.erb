@@ -1,3 +1,5 @@
+<% if user_signed_in? %>
+<br><br><br>
 <div class="page-header">
   <h1 class="heading">Listings <small>Find the freshest foods</small></h1>
 </div>
@@ -10,7 +12,7 @@
 <% @foods.each do |listing| %>
 
 <div class="panel panel-default">
-  <div class="panel-heading" style="background-color:#7e57c2; color: white;">
+  <div class="panel-heading" style="background-color:#a886bd; color: white;">
     <h3 class="panel-title" style="font-weight: 500px;"><%= link_to listing.tool, listing %></h3>
   </div>
   <div class="panel-body">
@@ -33,3 +35,195 @@
 </div>
 </div>
 <br>
+<% else %>
+
+<body class="land-body">
+
+<!-- first section - Home -->
+<div id="home" class="home">
+  <div class="text-vcenter">
+    <h1>Farms2Forks</h1>
+    <h3>Recieve local, fresh, and organic food without hassle.</h3>
+    <a href="#about" class="btn btn-land btn-lg">Get Started</a>
+  </div>
+</div>
+<!-- /first section -->
+
+<!-- second section - About -->
+<div id="about" class="pad-section">
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-6 text-center">
+        <h2><strong>What is Farms2Forks?</strong></h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum metus et ligula venenatis, at rhoncus nisi molestie. Pellentesque porttitor elit suscipit massa laoreet metus.</p>
+      </div>
+      <div class="col-sm-6 text-center">
+        <h2><strong>How does it work?</strong></h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum metus et ligula venenatis, at rhoncus nisi molestie. Pellentesque porttitor elit suscipit massa laoreet metus.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /second section -->
+
+
+<!-- third section - Services -->
+<div id="services" class="pad-section">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-4 col-xs-6">
+        <i class="glyphicon glyphicon-heart"> </i>
+        <h4>Support Food Insecurity</h4>
+        <p>In Canada, over 15% of the population is food insecure. This means that families do not have access to healthy, accessable, and affordable food. Through our platform you can anonomousy apply to gain special discounts from the food.</p>
+      </div>
+      <div class="col-sm-4 col-xs-6">
+        <i class="glyphicon glyphicon-leaf"> </i>
+        <h4>Get Fresh Food</h4>
+        <p>Purchase your fresh and local food from the source, not the store. Through Farms2Forks, you can easily get amazing food without having to travel directly to the farm, instead we bring it to you.</p>
+      </div>
+      <div class="col-sm-4 col-xs-6">
+        <i class="glyphicon glyphicon-eye-open"> </i>
+        <h4>Get Noticed</h4>
+        <p>As a farmer, it may be hard to market your self and your produce to other people, and it also may be difficult to provide the CSA. With Farms2Forks, you can easily market your farm, and drop off your produce for customers at our distribution centers.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /third section -->
+
+<!-- fourth section - Information -->
+<div id="information" class="pad-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">What is food insecurity</h2>
+          </div>
+          <div class="panel-body lead">
+            In Canada, nearly one in eight households experience food insecurity. This means that 4 million Canadians, including 1.5 million children are hungry, or are struggling to avoid hunger. This enormous problem can be broken down into four major pillars, including availability, access, utilization, and stability. The Farms2Forks platform addresses the pillars of availability and access, while addressing concerns regarding costs, transportation, and nutrition.
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">Applying for special Fork account</h2>
+          </div>
+          <div class="panel-body lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit adipiscing blandit. Aliquam placerat, velit a fermentum fermentum, mi felis vehicula justo, a dapibus quam augue non massa. Duis euismod, augue et tempus consequat, lorem mauris porttitor quam, consequat ultricies mauris mi a metus. Phasellus congue, leo sed ultricies tristique, nunc libero tempor ligula, at varius mi nibh in nisi. Aliquam erat volutpat. Maecenas rhoncus, neque facilisis rhoncus tempus, elit ligula varius dui, quis amet. 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">What is food insecurity</h2>
+          </div>
+          <div class="panel-body lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit adipiscing blandit. Aliquam placerat, velit a fermentum fermentum, mi felis vehicula justo, a dapibus quam augue non massa. Duis euismod, augue et tempus consequat, lorem mauris porttitor quam, consequat ultricies mauris mi a metus. Phasellus congue, leo sed ultricies tristique, nunc libero tempor ligula, at varius mi nibh in nisi. Aliquam erat volutpat. Maecenas rhoncus, neque facilisis rhoncus tempus, elit ligula varius dui, quis amet. 
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">Applying for special Fork account</h2>
+          </div>
+          <div class="panel-body lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit adipiscing blandit. Aliquam placerat, velit a fermentum fermentum, mi felis vehicula justo, a dapibus quam augue non massa. Duis euismod, augue et tempus consequat, lorem mauris porttitor quam, consequat ultricies mauris mi a metus. Phasellus congue, leo sed ultricies tristique, nunc libero tempor ligula, at varius mi nibh in nisi. Aliquam erat volutpat. Maecenas rhoncus, neque facilisis rhoncus tempus, elit ligula varius dui, quis amet. 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /fourth section -->
+
+<!-- fifth section -->
+<div id="services" class="pad-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h3>Farms and the Forks</h3>
+        <h4>At Farms2Forks, you can sign up as either a Farm or a Fork. Farms are users who are able to produce their own food and sell it on the platform, while Forks are users who purchase the foods.</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /fifth section -->
+
+<!-- google map -->
+<div id="google_map"></div>
+<!-- /google map -->
+
+<!-- footer -->
+<footer>
+  <hr />
+  <div class="container">
+    <p class="text-right">Copyright &copy; Farms2Forks 2016</p>
+  </div>
+</footer>
+<!-- /footer -->
+
+</body>
+
+
+<script>
+  $(document).ready(function() {
+    setTimeout(function() {
+      $('#notice-wrapper').fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }, 2000);
+  });
+
+
+
+$(document).ready(function (){
+
+  // create a LatLng object containing the coordinate for the center of the map
+  var latlng = new google.maps.LatLng(43.988461, -79.470389);
+
+  // prepare the map properties
+  var options = {
+    zoom: 15,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    navigationControl: true,
+    mapTypeControl: false,
+    scrollwheel: false,
+    disableDoubleClickZoom: true
+  };
+
+  // initialize the map object
+  var map = new google.maps.Map(document.getElementById('google_map'), options);
+
+  // add Marker
+  var marker1 = new google.maps.Marker({
+    position: latlng, map: map
+  });
+
+  // add listener for a click on the pin
+  google.maps.event.addListener(marker1, 'click', function() {
+    infowindow.open(map, marker1);
+  });
+
+  // add information window
+  var infowindow = new google.maps.InfoWindow({
+    content:  '<div class="info"><strong>This is my company</strong><br><br>My company address is here<br>Toronto</div>'
+  });  
+});
+
+
+</script>
+<script src="//maps.google.com/maps/api/js?sensor=true"></script>
+</html>
+
+
+<% end %>
