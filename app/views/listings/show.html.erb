@@ -10,6 +10,7 @@
                             <div style="font-size:36px; text-align: center;">$<%= @food.price %></div> <span>for <strong><%= @food.amount %>kg</strong></span>
                         </div>
                         <div class="col-sm-9 col-xs-12 user-info-box">
+                        <a class="btn btn-primary pull-right" data-toggle="modal" data-target="#buyModal"><i class="fa fa-smile-o fa-lg" aria-hidden="true"></i> Buy Food</a>
                             <h3 class="user-name"><%= @food.tool %></h3>
                             <p><strong>Food located in <span class="user-dept"><%= @food.user.location %></span></strong></p>
                             <p><span class="user-year">Posted <%= time_ago_in_words(@food.created_at) %> ago by <%= link_to @food.user.name, @food.user %>
@@ -68,6 +69,26 @@
             </div>
         </div>
     </div>
+</div>
+
+
+<div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Contact Farmer</h4>
+      </div>
+      <div class="modal-body" style="display:table; margin: 0 auto;">
+
+      <h2 class="heading"><%= @food.user.name %></h2>
+      <h2 class="heading"><strong>~</strong></h2>
+      <h3 class="heading"><strong>Phone:</strong> <%= @food.user.phone %></h3>
+      <h3 class="heading"><strong>Email:</strong> <%= @food.user.email %></h3>
+      <h3 class="heading"><strong>Payment URL:</strong> <%= @food.user.payment_url %></h3>
+      </div>
+    </div>
+  </div>
 </div>
 
 <br><br>

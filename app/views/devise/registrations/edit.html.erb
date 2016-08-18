@@ -46,6 +46,11 @@
           </div>
 
           <div class="field">
+            <%= f.label "Payment URL" %><br>
+            <%= f.text_field :payment_url %>
+          </div>
+
+          <div class="field">
             <%= f.label :password_confirmation %><br />
             <%= f.password_field :password_confirmation, autocomplete: "off" %>
           </div>
