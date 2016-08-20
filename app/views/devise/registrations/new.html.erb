@@ -1,4 +1,4 @@
-<br><br>
+<br><br><br><br>
 <div class="container">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -7,7 +7,7 @@
                     <h1 class="title">Sign Up</h1>
                     <hr class="colorgraph">
           <form class="form-horizontal" method="post" action="#">
-            
+
             <h4 class="radio">
               <label><input id="fork" type="radio" name="optradio">Become a Fork</label>
             </h4>
@@ -117,9 +117,9 @@
             </div>
 
             </div>
-            
+
             <div id="buttons" style="display: none;">
-              
+
               <div class="form-group ">
               <%= f.submit "Sign up", :class => "btn btn-primary btn-lg btn-block login-button"%>
             </div>
