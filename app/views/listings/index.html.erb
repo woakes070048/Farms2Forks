@@ -7,296 +7,233 @@
 <div class="card-panel" style="width: 40%; display:table; margin: 0 auto;">
   <% @tools.to_a %>
   <% if params[:search] %>
-    <div id="query_return">results for "<b><%= params[:search] %></b>"</div>
+  <div id="query_return">results for "<b><%= params[:search] %></b>"</div>
   <% end %>
-<% @foods.each do |listing| %>
+  <% @foods.each do |listing| %>
 
-<div class="panel panel-default">
-  <div class="panel-heading" style="background-color:#a886bd; color: white;">
-    <h3 class="panel-title" style="font-weight: 500px;"><%= link_to listing.tool, listing %></h3>
-  </div>
-  <div class="panel-body">
-    <div class="row">
-      <div class="col-md-3"><%= link_to (image_tag listing.image.url(:thumb), :class => 'show_img'), listing %></div>
-      <div class="col-md-6" style="font-size: 15px;">
-        <div>Farm located in <strong><%= listing.user.location %></strong></div>
-        <div>Farmer rating:<%= rating_for listing.user, "user" %></div>
-        <div>Posted <%= time_ago_in_words(listing.created_at) %> ago by <%= link_to listing.user.name, listing.user %>
-          <span><%= image_tag listing.user.avatar.url(:thumb), :class => "prof-img" %></span></div>
-      </div>
-      <div class="col-md-3">
-        <div style="text-align: center;"><strong><%= listing.amount %>kg</strong> for</div>
-        <p style="font-size:36px; text-align: center;">$<%= listing.price %></p>
+  <div class="panel panel-default">
+    <div class="panel-heading" style="background-color:#a886bd; color: white;">
+      <h3 class="panel-title" style="font-weight: 500px;"><%= link_to listing.tool, listing %></h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-3"><%= link_to (image_tag listing.image.url(:thumb), :class => 'show_img'), listing %></div>
+        <div class="col-md-6" style="font-size: 15px;">
+          <div>Farm located in <strong><%= listing.user.location %></strong></div>
+          <div>Farmer rating:<%= rating_for listing.user, "user" %></div>
+          <div>Posted <%= time_ago_in_words(listing.created_at) %> ago by <%= link_to listing.user.name, listing.user %>
+            <span><%= image_tag listing.user.avatar.url(:thumb), :class => "prof-img" %></span></div>
+          </div>
+          <div class="col-md-3">
+            <div style="text-align: center;"><strong><%= listing.amount %>kg</strong> for</div>
+            <p style="font-size:36px; text-align: center;">$<%= listing.price %></p>
+          </div>
+        </div>
       </div>
     </div>
+    <% end %>
   </div>
-</div>
-<% end %>
-</div>
 </div>
 <br>
 <% else %>
 
 <body class="land-body">
 
-<!-- first section - Home -->
-<div id="home" class="home">
-  <div class="text-vcenter">
-    <h1>Fresh Food, no Hassle.</h1><br>
-    <a href="/users/sign_up" class="btn btn-land btn-lg" style="width: 250px;">Sign Up Now <i class="fa fa-arrow-right"></i></a>
+  <!-- first section - Home -->
+  <div id="home" class="home">
+    <div class="text-vcenter">
+      <h1>Fresh Food, no Hassle.</h1><br>
+      <a href="/users/sign_up" class="btn btn-land btn-lg" style="width: 250px;">Sign Up Now <i class="fa fa-arrow-right"></i></a>
+    </div>
   </div>
-</div>
-<!-- /first section -->
+  <!-- /first section -->
 
-<!-- third section - Services -->
-<div id="services" class="pad-section">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-sm-4 col-xs-6">
-        <i class="glyphicon glyphicon-heart"> </i>
-        <h2><strong>Support Food Insecurity</strong></h2>
-        <p class="lead">With every transaction you are supporting food insecurity. You can also apply to gain special discounts from the food.</p>
-      </div>
-      <div class="col-sm-4 col-xs-6">
-        <i class="glyphicon glyphicon-leaf"> </i>
-        <h2><strong>Get Quality Foods</strong></h2>
-        <p class="lead">Easily get amazing food without having to travel directly to the farm, instead we bring it to you.</p>
-      </div>
-      <div class="col-sm-4 col-xs-6">
-        <i class="glyphicon glyphicon-eye-open"> </i>
-        <h2><strong>Get Noticed</strong></h2>
-        <p class="lead">With Farms2Forks, you can easily market your farm, and sell your quality foods for an extra profit.</p>
+  <!-- third section - Services -->
+  <div id="services" class="pad-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-sm-4 col-xs-6">
+          <i class="glyphicon glyphicon-heart"> </i>
+          <h2><strong>Support Food Insecurity</strong></h2>
+          <p class="lead">With every transaction you are supporting food insecurity. You can also apply to gain special discounts from the food.</p>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+          <i class="glyphicon glyphicon-leaf"> </i>
+          <h2><strong>Get Quality Foods</strong></h2>
+          <p class="lead">Easily get amazing food without having to travel directly to the farm, instead we bring it to you.</p>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+          <i class="glyphicon glyphicon-eye-open"> </i>
+          <h2><strong>Get Noticed</strong></h2>
+          <p class="lead">With Farms2Forks, you can easily market your farm, and sell your quality foods for an extra profit.</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- /third section -->
+  <!-- /third section -->
 
-<!-- second section - About -->
-<div id="about" class="pad-section">
-  <div class="container">
-    <div class="row">
-    <div class="col-sm-12 text-center">
-        <h3><strong>Fresh Food, no Hassle.</strong></h3>
-        <p class="lead" style="width: 80%; margin: 0 auto">With Farms2Forks, you don't need to travel hours to get local and quality food, instead you pick what you want and we deliver to you.</p>
+  <!-- second section - About -->
+  <div id="about" class="pad-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h3><strong>Fresh Food, no Hassle.</strong></h3>
+          <p class="lead" style="width: 80%; margin: 0 auto">With Farms2Forks, you don't need to travel hours to get local and quality food, instead you pick what you want and we deliver to you.</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- /second section -->
+  <!-- /second section -->
 
-<!-- second section - About -->
-<div id="about" class="pad-section">
-  <div class="container">
-    <div class="row">
-    <div class="col-sm-12 text-center">
-        <h2><strong>How Farms2Forks Works</strong></h2>
-    </div>
-      <div class="col-sm-4 text-center">
+  <!-- second section - About -->
+  <div id="about" class="pad-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h2><strong>How Farms2Forks Works</strong></h2>
+        </div>
+        <div class="col-sm-4 text-center">
           <h2>1. Find a Food Listing</h2><br>
           <p><i class="fa fa-search fa-lg process"></i></p><br>
           <p class="lead">Search through the website to see available food listings.</p>        </div>
-        <div class="col-sm-4 text-center">
+          <div class="col-sm-4 text-center">
             <h2>2. Buy the Food</h2><br>
             <p><i class="fa fa-usd fa-lg process"></i></p><br>
             <p class="lead">Once you find a listing you like, view its info page and buy it.</p>
           </div>
-      <div class="col-sm-4 text-center">
-          <h2>3. We Deliver it</h2><br>
-          <p><i class="fa fa-truck fa-lg process"></i></p><br>
-          <p class="lead">And now you wait for us to deliver the food to your doorstep.</p>
-        </div>
-    </div>
-  </div>
-</div>
-<!-- /second section -->
-
-<!-- second section - About -->
-<div id="about" class="pad-section">
-  <div class="container">
-    <div class="row" style="width: 60%; margin: 0 auto">
-    <div class="col-sm-12 text-center">
-        <h2><strong>Three Ways to Use</strong></h2>
-        <p class="lead"></p>
-      </div>
-
-      <div class="col-sm-1">
-        <h2><i class="fa fa-angle-right process"></i></h2>
-      </div>
-      <div class="col-sm-11">
-        <h2>1. Farmer</h2>
-        <p class="lead">As a Farmer, you are able to create food listings that show your freshly picked food, and that can be bought by Fork accounts. Thorugh this you are able to gain customers and further advertize your farm.</p>
-      </div>
-
-      <div class="col-sm-1">
-        <h2><i class="fa fa-angle-right process"></i></h2>
-      </div>
-      <div class="col-sm-11">
-        <h2>2. Fork</h2>
-        <p class="lead">The Fork account allows you to gain access to fresh, local, and quality food that you might not have been able to purchase before, while also helping support local small-scale farms.</p>
-      </div>
-
-      <div class="col-sm-1">
-        <h2><i class="fa fa-angle-right process"></i></h2>
-      </div>
-      <div class="col-sm-11">
-        <h2>3. Aided Fork</h2>
-        <p class="lead">If you are one of many people in Canada who are suffering from food insecurity, the Aided Fork account is for you - gain a 30% discount from ant food listing.</p>
-        <p class="lead"><a href="#">Learn more <i class="fa fa-angle-right"></i></a></p>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!-- /second section -->
-
-
-<div id="about" class="pad-section">
-  <div class="container">
-    <div class="col-sm-12 text-center">
-      <h2><strong>The Process</strong></h2>
-      <p class="lead"></p>
-    </div>
-
-    <div class="row text-center">
-
-      <div class="col-sm-2 col-centered">
-        <i class="fa fa-plus-circle process" aria-hidden="true"></i>
-        <h4>Farmer creates a listing</h4>
-        <p></p>
-      </div>
-      <div class="col-sm-1 col-centered">
-        <i class="fa fa-arrow-right arw" aria-hidden="true"></i>
-        <p></p>
-      </div>
-
-      <div class="col-sm-2 col-centered">
-        <i class="fa fa-usd process" aria-hidden="true"></i>
-        <h4>Fork finds food and buys it</h4>
-        <p></p>
-      </div>
-      <div class="col-sm-2 col-centered">
-        <i class="fa fa-arrow-right arw" aria-hidden="true"></i>
-        <p></p>
-      </div>
-
-      <div class="col-sm-2 col-centered">
-        <i class="fa fa-building process" aria-hidden="true"></i>
-        <h4>Farmer delivers to our centre</h4>
-        <p></p>
-      </div>
-      <div class="col-sm-1 col-centered">
-        <i class="fa fa-arrow-right arw" aria-hidden="true"></i>
-        <p></p>
-      </div>
-
-      <div class="col-sm-2 col-centered">
-        <i class="fa fa-users process" aria-hidden="true"></i>
-        <h4>We deliver to the specific Fork</h4>
-        <p></p>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div id="information" class="pad-section"></div>
-
-<!-- fourth section - Information -->
-<!--<div id="information" class="pad-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h2 class="panel-title">What is food insecurity</h2>
-          </div>
-          <div class="panel-body lead">
-            In Canada, nearly one in eight households experience food insecurity. This means that 4 million Canadians, including 1.5 million children are hungry, or are struggling to avoid hunger. This enormous problem can be broken down into four major pillars, including availability, access, utilization, and stability. The Farms2Forks platform addresses the pillars of availability and access, while addressing concerns regarding costs, transportation, and nutrition.
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h2 class="panel-title">Applying for special Fork account</h2>
-          </div>
-          <div class="panel-body lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit adipiscing blandit. Aliquam placerat, velit a fermentum fermentum, mi felis vehicula justo, a dapibus quam augue non massa. Duis euismod, augue et tempus consequat, lorem mauris porttitor quam, consequat ultricies mauris mi a metus. Phasellus congue, leo sed ultricies tristique, nunc libero tempor ligula, at varius mi nibh in nisi. Aliquam erat volutpat. Maecenas rhoncus, neque facilisis rhoncus tempus, elit ligula varius dui, quis amet.
+          <div class="col-sm-4 text-center">
+            <h2>3. We Deliver it</h2><br>
+            <p><i class="fa fa-truck fa-lg process"></i></p><br>
+            <p class="lead">And now you wait for us to deliver the food to your doorstep.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h2 class="panel-title">What is food insecurity</h2>
+    <!-- /second section -->
+
+    <!-- second section - About -->
+    <div id="about" class="pad-section">
+      <div class="container">
+        <div class="row" style="width: 60%; margin: 0 auto">
+          <div class="col-sm-12 text-center">
+            <h2><strong>Three Ways to Use</strong></h2>
+            <p class="lead"></p>
           </div>
-          <div class="panel-body lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit adipiscing blandit. Aliquam placerat, velit a fermentum fermentum, mi felis vehicula justo, a dapibus quam augue non massa. Duis euismod, augue et tempus consequat, lorem mauris porttitor quam, consequat ultricies mauris mi a metus. Phasellus congue, leo sed ultricies tristique, nunc libero tempor ligula, at varius mi nibh in nisi. Aliquam erat volutpat. Maecenas rhoncus, neque facilisis rhoncus tempus, elit ligula varius dui, quis amet.
+
+          <div class="col-sm-1">
+            <h2><i class="fa fa-angle-right process"></i></h2>
           </div>
+          <div class="col-sm-11">
+            <h2>1. Farmer</h2>
+            <p class="lead">As a Farmer, you are able to create food listings that show your freshly picked food, and that can be bought by Fork accounts. Thorugh this you are able to gain customers and further advertize your farm.</p>
+          </div>
+
+          <div class="col-sm-1">
+            <h2><i class="fa fa-angle-right process"></i></h2>
+          </div>
+          <div class="col-sm-11">
+            <h2>2. Fork</h2>
+            <p class="lead">The Fork account allows you to gain access to fresh, local, and quality food that you might not have been able to purchase before, while also helping support local small-scale farms.</p>
+          </div>
+
+          <div class="col-sm-1">
+            <h2><i class="fa fa-angle-right process"></i></h2>
+          </div>
+          <div class="col-sm-11">
+            <h2>3. Aided Fork</h2>
+            <p class="lead">If you are one of many people in Canada who are suffering from food insecurity, the Aided Fork account is for you - gain a 30% discount from ant food listing.</p>
+            <p class="lead"><a href="/aided">Learn more <i class="fa fa-angle-right"></i></a></p>
+          </div>
+
         </div>
       </div>
-      <div class="col-sm-6">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h2 class="panel-title">Applying for special Fork account</h2>
+    </div>
+    <!-- /second section -->
+
+
+    <div id="about" class="pad-section">
+      <div class="container">
+        <div class="col-sm-12 text-center">
+          <h2><strong>The Process</strong></h2>
+          <p class="lead"></p>
+        </div>
+
+        <div class="row text-center">
+
+          <div class="col-sm-2 col-centered">
+            <i class="fa fa-plus-circle process" aria-hidden="true"></i>
+            <h4>Farmer creates a listing</h4>
+            <p></p>
           </div>
-          <div class="panel-body lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit adipiscing blandit. Aliquam placerat, velit a fermentum fermentum, mi felis vehicula justo, a dapibus quam augue non massa. Duis euismod, augue et tempus consequat, lorem mauris porttitor quam, consequat ultricies mauris mi a metus. Phasellus congue, leo sed ultricies tristique, nunc libero tempor ligula, at varius mi nibh in nisi. Aliquam erat volutpat. Maecenas rhoncus, neque facilisis rhoncus tempus, elit ligula varius dui, quis amet.
+          <div class="col-sm-1 col-centered">
+            <i class="fa fa-arrow-right arw" aria-hidden="true"></i>
+            <p></p>
+          </div>
+
+          <div class="col-sm-2 col-centered">
+            <i class="fa fa-usd process" aria-hidden="true"></i>
+            <h4>Fork finds food and buys it</h4>
+            <p></p>
+          </div>
+          <div class="col-sm-2 col-centered">
+            <i class="fa fa-arrow-right arw" aria-hidden="true"></i>
+            <p></p>
+          </div>
+
+          <div class="col-sm-2 col-centered">
+            <i class="fa fa-building process" aria-hidden="true"></i>
+            <h4>Farmer delivers to our centre</h4>
+            <p></p>
+          </div>
+          <div class="col-sm-1 col-centered">
+            <i class="fa fa-arrow-right arw" aria-hidden="true"></i>
+            <p></p>
+          </div>
+
+          <div class="col-sm-2 col-centered">
+            <i class="fa fa-users process" aria-hidden="true"></i>
+            <h4>We deliver to the specific Fork</h4>
+            <p></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="information" class="pad-section"></div>
+
+    <!-- fifth section -->
+    <div id="services" class="pad-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h3>Where are we?</h3>
+            <h4 style="width: 80%; margin: 0 auto;">When a Fork buys a food listing, Farmers are required to deliver it to our centralized distribution centre located in the North York Region. From there we handle the rest of the work.</h4>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div> -->
-<!-- /fourth section -->
+    <!-- /fifth section -->
 
-<!-- fifth section -->
-<div id="services" class="pad-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <h3>Where are we?</h3>
-        <h4 style="width: 80%; margin: 0 auto;">When a Fork buys a food listing, Farmers are required to deliver it to our centralized distribution centre located in the North York Region. From there we handle the rest of the work.</h4>
-        </div>
-    </div>
-  </div>
-</div>
-<!-- /fifth section -->
+    <!-- google map -->
+    <div id="google_map"></div>
+    <!-- /google map -->
 
-<!-- google map -->
-<div id="google_map"></div>
-<!-- /google map -->
-
-<!-- footer -->
-<footer>
-  <hr />
-  <div class="container">
-    <p class="text-right">Copyright &copy; Farms2Forks 2016</p>
-  </div>
-</footer>
-<!-- /footer -->
-
-</body>
+  </body>
 
 
-<script>
-  $(document).ready(function() {
-    setTimeout(function() {
-      $('#notice-wrapper').fadeOut('slow', function() {
-        $(this).remove();
-      });
-    }, 2000);
-  });
+  <script>
+    $(document).ready(function() {
+      setTimeout(function() {
+        $('#notice-wrapper').fadeOut('slow', function() {
+          $(this).remove();
+        });
+      }, 2000);
+    });
 
 
 
-$(document).ready(function (){
+    $(document).ready(function (){
 
   // create a LatLng object containing the coordinate for the center of the map
   var latlng = new google.maps.LatLng(43.988461, -79.470389);

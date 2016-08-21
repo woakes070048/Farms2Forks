@@ -2,63 +2,63 @@
 
 <div class="row main">
 	<%= form_for @food, html: { multipart: true } do |i| %>
-        <div class="main-login main-center">
-                    <h1 class="title">Add a Food</h1>
-                    <hr class="colorgraph">
-          <form class="form-horizontal">
+  <div class="main-login main-center">
+    <h1 class="title">Add a Food</h1>
+    <hr class="colorgraph">
+    <form class="form-horizontal">
 
-            <div class="form-group">
-              <label for="email" class="cols-sm-2 control-label">Food Title</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-pencil fa" aria-hidden="true"></i></span>
-                    <div class="field">
-                      <%= i.text_field :tool, :class => "form-control"  %>
-                    </div>
-                </div>
-              </div>
+      <div class="form-group">
+        <label for="email" class="cols-sm-2 control-label">Food Title</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-pencil fa" aria-hidden="true"></i></span>
+            <div class="field">
+              <%= i.text_field :tool, :class => "form-control"  %>
             </div>
-
-            <div class="form-group">
-              <label for="email" class="cols-sm-2 control-label">Price</label>
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-usd fa" aria-hidden="true"></i></span>
-                    <div class="field">
-                      <%= i.text_field :price, :class => "form-control"  %>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2"><strong>per</strong></div>
-                <div class="col-md-5">
-                  <div class="input-group">
-                    <div class="field">
-                      <%= i.text_field :amount, :class => "form-control"  %>
-                    </div>
-                    <span class="input-group-addon">kg</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="password" class="cols-sm-2 control-label">Image</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                    <div class="field">
-                      <%= i.file_field :image %>
-                    </div>
-                </div>
-              </div>
-            </div>
-  			<div>
-    			<%= i.submit "Create listing", :class => "btn btn-primary btn-lg btn-block login-button"%>
-  			</div>
-          </form>
+          </div>
         </div>
-        <% end %>
       </div>
+
+      <div class="form-group">
+        <label for="email" class="cols-sm-2 control-label">Price</label>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-usd fa" aria-hidden="true"></i></span>
+              <div class="field">
+                <%= i.text_field :price, :class => "form-control"  %>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2"><strong>per</strong></div>
+          <div class="col-md-5">
+            <div class="input-group">
+              <div class="field">
+                <%= i.text_field :amount, :class => "form-control"  %>
+              </div>
+              <span class="input-group-addon">kg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="cols-sm-2 control-label">Image</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <div class="field">
+              <%= i.file_field :image %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+       <%= i.submit "Create listing", :class => "btn btn-primary btn-lg btn-block login-button"%>
+     </div>
+   </form>
+ </div>
+ <% end %>
+</div>
 
 
 <br><br><br>

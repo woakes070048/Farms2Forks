@@ -51,12 +51,6 @@
   width: 100%;
 }
 
-#footer {
-  text-align: center;
-  opacity: 0.4;
-  background-color: grey;
-}
-
 #nav-img {
   width: 25px;
 }
@@ -254,6 +248,18 @@ html, body {
   background-size: cover;
 }
 
+#header {
+  background: url('https://hd.unsplash.com/photo-1432416623818-8bb2b6090320') no-repeat center center fixed;
+  display: table;
+  height: 50%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 #about {
 }
 
@@ -326,26 +332,15 @@ footer .glyphicon:hover {
 
 .btn-primary:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.2, 1.2);
-    -ms-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2);
-    transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s; /* Safari */
-    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
-    z-index: 1;
+  background-color: #800080;
+  border-color: #800080;
 }
 
 .btn-land:hover {
-  background-color: #8CD790;
-  border-color: #8CD790;
+  background-color: #800080;
+  border-color: #800080;
   cursor: pointer;
-  -webkit-transform: scale(1.2, 1.2);
-    -ms-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2);
-    transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s; /* Safari */
-    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
-    z-index: 1;
+  color: white;
 }
 
 .img-row {
@@ -405,4 +400,13 @@ footer .glyphicon:hover {
   transform: background-color(#a886bd);
   transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
+}
+
+
+.pillar {
+  font-family: serif;
+  font-weight: 900;
+  font-size: 250px;
+  color: #a886bd;
+  margin-bottom: -85px;
 }

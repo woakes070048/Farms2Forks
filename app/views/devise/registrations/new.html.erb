@@ -1,235 +1,174 @@
 <br><br><br><br>
 <div class="container">
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-      <div class="row main">
-        <div class="main-login main-center">
-                    <h1 class="title">Sign Up</h1>
-                    <hr class="colorgraph">
-          <form class="form-horizontal" method="post" action="#">
+  <div class="row main">
+    <div class="main-login main-center">
+      <h1 class="title">Sign Up</h1>
+      <hr class="colorgraph">
+      <form class="form-horizontal" method="post" action="#">
 
-            <h4 class="radio">
-              <label><input id="fork" type="radio" name="optradio">Become a Fork</label>
-            </h4>
-            <h4 class="radio">
-              <label><input id="farmer" type="radio" name="optradio">Become a Farmer</label>
-            </h4>
+        <h4 class="radio">
+          <label><input id="fork" type="radio" name="optradio">Become a Fork</label>
+        </h4>
+        <h4 class="radio">
+          <label><input id="farmer" type="radio" name="optradio">Become a Farmer</label>
+        </h4>
 
-            <div id="reg-user" style="display:none">
-            <div class="form-group">
-              <label for="name" class="cols-sm-2 control-label">Your Name</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                    <div class="field">
-                      <%= f.text_field :name, autofocus: true, :class => "form-control" %>
-                    </div>
+        <div id="reg-user" style="display:none">
+          <div class="form-group">
+            <label for="name" class="cols-sm-2 control-label">Your Name</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                <div class="field">
+                  <%= f.text_field :name, autofocus: true, :class => "form-control" %>
                 </div>
               </div>
             </div>
+          </div>
 
-                       <div class="field">
-              <%= f.label "Profile Picture" %><br />
-              <%= f.file_field :avatar %>
-            </div> <br>
+          <div class="field">
+            <%= f.label "Profile Picture" %><br />
+            <%= f.file_field :avatar %>
+          </div> <br>
 
-            <div class="form-group">
-              <label for="email" class="cols-sm-2 control-label">Your Email</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                    <div class="field">
-                      <%= f.email_field :email, :class => "form-control"  %>
-                    </div>
+          <div class="form-group">
+            <label for="email" class="cols-sm-2 control-label">Your Email</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                <div class="field">
+                  <%= f.email_field :email, :class => "form-control"  %>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="form-group">
-              <label for="password" class="cols-sm-2 control-label">Password</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                    <div class="field">
-                      <%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
-                    </div>
+          <div class="form-group">
+            <label for="password" class="cols-sm-2 control-label">Password</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                <div class="field">
+                  <%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="form-group">
-              <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                    <div class="field">
-                      <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control" %>
-                   </div>
+          <div class="form-group">
+            <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                <div class="field">
+                  <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control" %>
                 </div>
               </div>
             </div>
+          </div>
 
-            </div>
-
-            <div id="farmer-options" style="display: none;">
-
-            <div id="check"><%= f.check_box :is_lender, {}, true %> <%= f.label :is_lender, "Become a Farmer?" %> </div>
-
-           <div class="field">
-              <%= f.label "Profile Picture" %><br />
-              <%= f.file_field :avatar %>
-            </div> <br>
-
-            <div class="form-group">
-              <label for="username" class="cols-sm-2 control-label">Location</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-map-o fa" aria-hidden="true"></i></span>
-                    <div class="field">
-                      <%= f.text_field :location, :class => "form-control" %>
-                    </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="username" class="cols-sm-2 control-label">Paypal.me URL</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-link fa" aria-hidden="true"></i></span>
-                      <div class="field">
-                       <%= f.text_field :payment_url, :class => "form-control" %>
-                      </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="username" class="cols-sm-2 control-label">Phone</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
-                      <div class="field">
-                       <%= f.text_field :phone, :class => "form-control" %>
-                      </div>
-                </div>
-              </div>
-            </div>
-
-            </div>
-
-            <div id="buttons" style="display: none;">
-
-              <div class="form-group ">
-              <%= f.submit "Sign up", :class => "btn btn-primary btn-lg btn-block login-button"%>
-            </div>
-            <div class="login-register">
-                    <a href="/users/sign_in">Sign in</a>
-                 </div>
-
-            </div>
-
-          </form>
         </div>
+
+        <div id="farmer-options" style="display: none;">
+
+          <div id="check"><%= f.check_box :is_lender, {}, true %> <%= f.label :is_lender, "Become a Farmer?" %> </div>
+
+          <div class="field">
+            <%= f.label "Profile Picture" %><br />
+            <%= f.file_field :avatar %>
+          </div> <br>
+
+          <div class="form-group">
+            <label for="username" class="cols-sm-2 control-label">Location</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-map-o fa" aria-hidden="true"></i></span>
+                <div class="field">
+                  <%= f.text_field :location, :class => "form-control" %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="username" class="cols-sm-2 control-label">Paypal.me URL</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-link fa" aria-hidden="true"></i></span>
+                <div class="field">
+                 <%= f.text_field :payment_url, :class => "form-control" %>
+               </div>
+             </div>
+           </div>
+         </div>
+
+         <div class="form-group">
+          <label for="username" class="cols-sm-2 control-label">Phone</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+              <div class="field">
+               <%= f.text_field :phone, :class => "form-control" %>
+             </div>
+           </div>
+         </div>
+       </div>
+
+     </div>
+
+     <div id="buttons" style="display: none;">
+
+      <div class="form-group ">
+        <%= f.submit "Sign up", :class => "btn btn-primary btn-lg btn-block login-button"%>
       </div>
-    <% end %>
+      <div class="login-register">
+        <a href="/users/sign_in">Sign in</a>
+      </div>
+
     </div>
 
+  </form>
+</div>
+</div>
+<% end %>
+</div>
 
-<!--<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <script type="text/javascript">
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true %>
-  </div>
+    var checkBox = document.getElementById('user_is_lender');
+    var paypalInfo = document.getElementById('paypal');
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
+    var isFork = document.getElementById('fork');
+    var isFarmer = document.getElementById('farmer');
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em></em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    var regOptions = document.getElementById('reg-user');
+    var farmerOptions = document.getElementById('farmer-options');
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    var buttons = document.getElementById('buttons');
 
-  <div class="field">
-    <%= f.label "Profile Picture" %><br />
-    <%= f.file_field :avatar %>
-  </div>
-
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
-
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </div>
-
-  <div id="check"><%= f.check_box :is_lender, {}, true %> <%= f.label :is_lender, "Become a Farmer?" %> </div>
-
-  <div class="input-field" id="paypal" style="display:none;">
-    <%= f.label :payment_url %><br />
-    <%= f.text_field :payment_url %>
-  </div>
-
-  <div class='btn waves-effect waves-light teal lighten-1'>
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %> -->
-
-<script type="text/javascript">
-
-  var checkBox = document.getElementById('user_is_lender');
-  var paypalInfo = document.getElementById('paypal');
-
-  var isFork = document.getElementById('fork');
-  var isFarmer = document.getElementById('farmer');
-
-  var regOptions = document.getElementById('reg-user');
-  var farmerOptions = document.getElementById('farmer-options');
-
-  var buttons = document.getElementById('buttons');
-
-  isFork.onchange = function() {
-    if (this.checked) {
-      regOptions.style['display'] = 'block';
-      farmerOptions.style['display'] = 'none';
-    } else if (isFarmer.checked) {
-      farmerOptions.style['display'] = 'block';
-      regOptions.style['display'] = 'block';
+    isFork.onchange = function() {
+      if (this.checked) {
+        regOptions.style['display'] = 'block';
+        farmerOptions.style['display'] = 'none';
+      } else if (isFarmer.checked) {
+        farmerOptions.style['display'] = 'block';
+        regOptions.style['display'] = 'block';
+      }
+      buttons.style['display'] = 'block';
     }
-    buttons.style['display'] = 'block';
-  }
 
-  isFarmer.onchange = function() {
-    if (this.checked) {
-      farmerOptions.style['display'] = 'block';
-      regOptions.style['display'] = 'block';
-    } else if (isFork.checked) {
-      regOptions.style['display'] = 'block';
-      farmerOptions.style['display'] = 'none';
+    isFarmer.onchange = function() {
+      if (this.checked) {
+        farmerOptions.style['display'] = 'block';
+        regOptions.style['display'] = 'block';
+      } else if (isFork.checked) {
+        regOptions.style['display'] = 'block';
+        farmerOptions.style['display'] = 'none';
+      }
+      buttons.style['display'] = 'block';
     }
-    buttons.style['display'] = 'block';
-  }
 
-  /*checkBox.onchange = function() {
-    if(this.checked) {
-       paypalInfo.style['display'] = 'block';
-     } else {
-       paypalInfo.style['display'] = 'none';
-     }
-  }; */
-
-</script>
+ </script>
+ <br><br><br> <br><br><br> <br><br><br>

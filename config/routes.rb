@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'home/about'
 
   get '/welcome' => 'welcome#index'
+  get '/aided' => 'welcome#aided'
 
   devise_for :users
   resources :users, :only => [:show]
